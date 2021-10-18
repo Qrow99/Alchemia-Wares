@@ -49,6 +49,10 @@ public class Pickup : MonoBehaviour
             {
                 CameraZoom.leaveComputer();
             }
+            else
+            {
+                print("pausemenue");
+            }
         }
     }
 
@@ -64,7 +68,7 @@ public class Pickup : MonoBehaviour
 
     void moveObject()
     {
-        if(Vector3.Distance(heldObject.transform.position, holdparent.position) > 0.1f) //use movetowards?
+        if(Vector3.Distance(heldObject.transform.position, holdparent.position) > 0.1f)
         {
             Vector3 movedirection = (holdparent.position - heldObject.transform.position);
             heldObject.GetComponent<Rigidbody>().AddForce(movedirection * moveForce);
