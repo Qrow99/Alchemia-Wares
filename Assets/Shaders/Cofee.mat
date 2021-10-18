@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
+  m_Name: Cofee
   m_Shader: {fileID: -6465566751694194690, guid: 64dd35fdd3a8758459cb9bd9dae37f56, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,6 +44,6 @@ Material:
     - Depth: 0
     - Strength: 2
     m_Colors:
-    - Deep: {r: 0.23220113, g: 0.078987196, b: 0.23584908, a: 1}
-    - Shallow: {r: 0.9882354, g: 0.25882345, b: 0.99607843, a: 1}
+    - Deep: {r: 0.3679245, g: 0.2174074, b: 0.04685831, a: 1}
+    - Shallow: {r: 0.33962262, g: 0.1944847, b: 0.033641864, a: 1}
   m_BuildTextureStacks: []
