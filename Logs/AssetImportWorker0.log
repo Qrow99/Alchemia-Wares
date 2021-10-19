@@ -368,3 +368,4 @@ Received Import Request.
   path: Assets/Shaders/Cofee.mat
   artifactKey: Guid(cf4ee608f1760b74198c58e1aafe5117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Shaders/Cofee.mat using Guid(cf4ee608f1760b74198c58e1aafe5117) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe93c2d1c008407fe6cafbb2f0209d2b') in 0.018229 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
