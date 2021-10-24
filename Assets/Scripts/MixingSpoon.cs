@@ -7,6 +7,7 @@ public class MixingSpoon : MonoBehaviour
     [SerializeField] private mixer ingredients;
     public GameObject[] respawn_ingredients;
     public Transform[] spawnpoints;
+    public GameObject[] finished_potions;
     private GameObject new_ingredient;
     public GameObject props;
 
@@ -24,6 +25,9 @@ public class MixingSpoon : MonoBehaviour
                 if (ingredients.inputs.Contains("Solace Sage"))
                 {
                     print("Potion of common healing");
+                    new_ingredient = Instantiate(finished_potions[0], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[0].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -31,6 +35,9 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Cyclops Eye"))
                 {
                     print("20/20 potion");
+                    new_ingredient = Instantiate(finished_potions[1], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[1].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -38,6 +45,9 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Powdered Achia Seed"))
                 {
                     print("Witch Hazel");
+                    new_ingredient = Instantiate(finished_potions[2], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[2].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -45,6 +55,9 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Vampire Tears"))
                 {
                     print("Good Vibes Potion");
+                    new_ingredient = Instantiate(finished_potions[3], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[3].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -52,12 +65,18 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Griffin claws"))
                 {
                     print("Griffin Balm Potion");
+                    new_ingredient = Instantiate(finished_potions[4], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[4].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
                 else
                 {
                     print("Trash Potion");
+                    new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[11].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -65,6 +84,9 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[11].name;
+                new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -78,6 +100,9 @@ public class MixingSpoon : MonoBehaviour
                     ingredients.inputs.Contains("Jormungandr Scales"))
                 {
                     print("Melancholy Tonic");
+                    new_ingredient = Instantiate(finished_potions[5], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[5].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -86,12 +111,18 @@ public class MixingSpoon : MonoBehaviour
                          ingredients.inputs.Contains("Lightning in a bottle"))
                 {
                     print("Good Trip");
+                    new_ingredient = Instantiate(finished_potions[6], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[6].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
                 else
                 {
                     print("Trash Potion");
+                    new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[11].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -99,6 +130,9 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[11].name;
+                new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -113,6 +147,9 @@ public class MixingSpoon : MonoBehaviour
                     ingredients.inputs.Contains("Jormungandr Scales"))
                 {
                     print("Laganja Extravaganza");
+                    new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[7].name;
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -122,6 +159,10 @@ public class MixingSpoon : MonoBehaviour
                         ingredients.inputs.Contains("Lightning in a bottle"))
                 {
                     print("Sike Potion");
+                    new_ingredient = Instantiate(finished_potions[8], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[8].name;
+
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -131,12 +172,20 @@ public class MixingSpoon : MonoBehaviour
                         ingredients.inputs.Contains("Lightning in a bottle"))
                 {
                     print("Arnold Extract");
+                    new_ingredient = Instantiate(finished_potions[9], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[9].name;
+
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
                 else
                 {
                     print("Trash Potion");
+                    new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    new_ingredient.name = finished_potions[11].name;
+
+                    new_ingredient.transform.parent = props.transform;
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -144,6 +193,10 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[11].name;
+
+                new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -159,12 +212,19 @@ public class MixingSpoon : MonoBehaviour
                 ingredients.inputs.Contains("Solace Sage"))
             {
                 print("Panacea");
+                new_ingredient = Instantiate(finished_potions[10], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[10].name;
+
+                new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
             }
             else
             {
                 print("Trash Potion");
+                new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[11].name;
+                new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -172,6 +232,9 @@ public class MixingSpoon : MonoBehaviour
         else
         {
             print("Trash Potion");
+            new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+            new_ingredient.name = finished_potions[11].name;
+            new_ingredient.transform.parent = props.transform;
             respawningredients();
             ingredients.inputs.Clear();
         }
