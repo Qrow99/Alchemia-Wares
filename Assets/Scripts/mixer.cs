@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class mixer : MonoBehaviour
 {
-    public GameObject result;
     public Transform spawnpoint;
     public List<string> inputs = new List<string>();
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag ==  "Ingredient")
