@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
         //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.green);
         if (Input.GetKeyDown(KeyCode.Mouse0) && CameraZoom.look.zoomed == false)
         {
-            print("click");
+            //print("click");
             if (heldObject == null)
             {
                 RaycastHit hit;

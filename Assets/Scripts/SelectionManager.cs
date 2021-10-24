@@ -25,12 +25,6 @@ public class SelectionManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Selected != null)
-        {
-            crosshair.GetComponent<Image>().color = Color.green;
-            itemname.SetActive(false);
-        }
-
         Ray = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
         Debug.DrawRay(Ray.origin, Ray.direction, Color.green);
         if (Physics.Raycast(Ray, out Hit)) //if raycast hits something
@@ -38,7 +32,7 @@ public class SelectionManager : MonoBehaviour
             if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Pickups")) //check if the thing hit by raycast is a pickup
             {
                 Selected = Hit.transform;
-                if(Selected.parent.name != "Pickup destination")
+                if (Selected.parent.name != "Pickup destination")
                 {
                     while (Selected.parent.name != "Props")
                     {
@@ -49,6 +43,32 @@ public class SelectionManager : MonoBehaviour
                     itemname.SetActive(true);
                     itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
                 }
+            }
+            else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Mixing Spoon")) //check if the thing hit by raycast is a mixing spoon
+            {
+                Selection = Selected;
+                crosshair.GetComponent<Image>().color = Color.red;
+                itemname.SetActive(true);
+                itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Mix Ingredients";
+            }
+            else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer")) //check if the thing hit by raycast is a computer
+            {
+                Selection = Selected;
+                crosshair.GetComponent<Image>().color = Color.red;
+                itemname.SetActive(true);
+                itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Tricks and Treats.com";
+            }
+            else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Send Potion")) //check if the thing hit by raycast is a computer
+            {
+                Selection = Selected;
+                crosshair.GetComponent<Image>().color = Color.red;
+                itemname.SetActive(true);
+                itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Send Potion";
+            }
+            else
+            {
+                crosshair.GetComponent<Image>().color = Color.green;
+                itemname.SetActive(false);
             }
         }
 

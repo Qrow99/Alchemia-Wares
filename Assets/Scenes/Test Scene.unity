@@ -392,7 +392,7 @@ GameObject:
   - component: {fileID: 150882922}
   - component: {fileID: 150882924}
   - component: {fileID: 150882923}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Animation trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621909025}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: receptacle_top_and_bottom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1975,6 +1975,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905028280}
   m_Mesh: {fileID: -8881837836963716247, guid: 90cacf1c54de17f498cdcbf1012531c3, type: 3}
+--- !u!1 &928514088 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2519706174441069688, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+  m_PrefabInstance: {fileID: 7987557116264786044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &928514090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928514088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5fe6376c4afd544b8b5dd4251d937e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredients: {fileID: 1210216621}
+  respawn_ingredients:
+  - {fileID: 7529453775453489643, guid: 575b6e8291b5ce64bac81598a97c3a67, type: 3}
+  - {fileID: 3286464327093445607, guid: ca638e4edbae18f4e9c495bc4f7e84fd, type: 3}
+  - {fileID: 7229399872088064201, guid: ee4eebbcf0e42fc4d9f1b8ea461ea74e, type: 3}
+  - {fileID: 5979301771526988376, guid: 72a6054f5810a1247b78b492edbea782, type: 3}
+  - {fileID: 3019758157079522715, guid: 86eaba34476caf44ca4d8592907f82ca, type: 3}
+  - {fileID: 6572951980242451197, guid: 9231798efe745f14cb54b5bcaddba807, type: 3}
+  - {fileID: 5232459684776629071, guid: cccccceb6ac56174bb10c17794e05c4e, type: 3}
+  spawnpoints:
+  - {fileID: 1646804566}
+  - {fileID: 454156052}
+  - {fileID: 691250561}
+  - {fileID: 1820275986}
+  - {fileID: 1963529854}
+  - {fileID: 57447682}
+  - {fileID: 2084297002}
+  props: {fileID: 1122830099}
+--- !u!64 &928514093
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928514088}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8364485272483929456, guid: eae12c9b91a7ff943ad511ae36b8fa06, type: 3}
 --- !u!1 &1002099504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2151,6 +2200,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210216621 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7987557117624307309, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+  m_PrefabInstance: {fileID: 7987557116264786044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 156fed05148c91747aa3ebe90fb5a1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1243765933
 GameObject:
   m_ObjectHideFlags: 0
@@ -3542,7 +3602,7 @@ GameObject:
   - component: {fileID: 2007020030}
   - component: {fileID: 2007020029}
   - component: {fileID: 2007020031}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Deposit top and bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3830,7 +3890,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084297001}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.06, y: -1.322, z: -4.71}
+  m_LocalPosition: {x: 12.06, y: -1.024, z: -4.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1272460803}
@@ -5850,7 +5910,7 @@ GameObject:
   - component: {fileID: 8601162746786237011}
   - component: {fileID: 8237037534068464675}
   - component: {fileID: 1711871907845643322}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6904,7 +6964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2324337835918403139}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: receptacle_top_and_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9780,7 +9840,7 @@ GameObject:
   - component: {fileID: 900338288158329240}
   - component: {fileID: 7462563527062886801}
   - component: {fileID: 6765355893572293709}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Door.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10500,7 +10560,7 @@ GameObject:
   - component: {fileID: 2665514650090622374}
   - component: {fileID: 6059379397087035818}
   - component: {fileID: 7378267244603920753}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Deposit top and bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11128,6 +11188,22 @@ PrefabInstance:
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 60800376}
+    - target: {fileID: 2519706174441069688, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_Name
+      value: Mix Ingredients
+      objectReference: {fileID: 0}
+    - target: {fileID: 2519706174441069688, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987557117624307315, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987557117624307315, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.608
+      objectReference: {fileID: 0}
     - target: {fileID: 7987557117774384024, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
       propertyPath: m_Name
       value: Cauldron
