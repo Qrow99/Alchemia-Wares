@@ -25,8 +25,8 @@ public class Pickup : MonoBehaviour
                 {
 
 
-                    Debug.Log("Object " + hit.transform.gameObject.name + "\nLayer " + hit.transform.gameObject.layer);
-                    Debug.Log("Object Parent " + hit.transform.parent.name);
+                    //Debug.Log("Object " + hit.transform.gameObject.name + "\nLayer " + hit.transform.gameObject.layer);
+                    //Debug.Log("Object Parent " + hit.transform.parent.name);
 
 
 
@@ -36,10 +36,10 @@ public class Pickup : MonoBehaviour
                     }
                     else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer"))
                     {
-                        Vector3 zoomPosition = hit.transform.parent.forward * 1f;
-                        CameraZoom.playerEndpoint = hit.transform.position + zoomPosition;
-                                                
-                        CameraZoom.cameraEndpoint = CameraZoom.playerEndpoint + zoomPosition * 1.1f;
+                        //Vector3 zoomPosition = hit.transform.parent.forward * 1f;
+                        //CameraZoom.playerEndpoint = hit.transform.position + zoomPosition;    
+                        //CameraZoom.cameraEndpoint = CameraZoom.playerEndpoint + zoomPosition * 1.1f;
+                        CameraZoom.target = hit.transform;
                         CameraZoom.computerzoom();
                     }
                 }
