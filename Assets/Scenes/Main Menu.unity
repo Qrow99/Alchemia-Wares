@@ -254,7 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   sphere: {fileID: 1703490881461785102}
-  num_potions: 300
+  num_potions: 1000
   Potions:
   - {fileID: 8517086251367259030, guid: 52d3e61556e9bf845b84156ca4d7bf33, type: 3}
   - {fileID: 2783575383205996478, guid: 41a0d39fb50e5ae4488ac49a0c2350b7, type: 3}
