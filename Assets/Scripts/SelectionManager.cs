@@ -29,9 +29,9 @@ public class SelectionManager : MonoBehaviour
         Debug.DrawRay(Ray.origin, Ray.direction, Color.green);
         if (Physics.Raycast(Ray, out Hit)) //if raycast hits something
         {
+            Selected = Hit.transform;
             if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Pickups")) //check if the thing hit by raycast is a pickup
             {
-                Selected = Hit.transform;
                 if (Selected.parent.name != "Pickup destination")
                 {
                     while (Selected.parent.name != "Props")
@@ -64,6 +64,17 @@ public class SelectionManager : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 itemname.SetActive(true);
                 itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Send Potion";
+            }
+            else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame")) //check if the thing hit by raycast is a computer
+            {
+                Selection = Selected;
+                while (Selected.parent.name != "Minigame Stuff")
+                {
+                    Selected = Selected.parent;
+                }
+                crosshair.GetComponent<Image>().color = Color.red;
+                itemname.SetActive(true);
+                itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
             }
             else
             {

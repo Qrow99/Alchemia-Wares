@@ -34,7 +34,7 @@ public class Pickup : MonoBehaviour
                     {
                         PickupObject(hit.transform.gameObject);
                     }
-                    else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer"))
+                    else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer") || hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame"))
                     {
                         //Vector3 zoomPosition = hit.transform.parent.forward * 1f;
                         //CameraZoom.playerEndpoint = hit.transform.position + zoomPosition;    
