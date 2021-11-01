@@ -33,10 +33,10 @@ public class mouselook : MonoBehaviour
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             PlayerBody.Rotate(Vector3.up * mouseX);
         }   
-        if (zoomed)
-        {
-            print("zoomed");
-        }
+        //if (zoomed)
+        //{
+            //print("zoomed");
+        //}
 
     }
 }

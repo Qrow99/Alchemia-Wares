@@ -44,6 +44,7 @@ public class MoveCamera : MonoBehaviour
 
     public void computerzoom()
     {
+        Debug.Log("Transform " + transform.name + "\nTransform Position x: " + transform.position.x + "\ty: " + transform.position + "\tz: " + transform.position);
         currentPlayerpos = transform.position;
         currentCamerapos = Playercamera.transform.position;
         //print(currentpos.x + " " + currentpos.y + " " + currentpos.z);
