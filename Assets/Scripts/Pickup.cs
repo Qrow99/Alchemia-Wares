@@ -11,8 +11,9 @@ public class Pickup : MonoBehaviour
     public LayerMask pickups;
     public MoveCamera CameraZoom;
     public Transform Props;
+    public PauseButtons pause_script;
 
-    private void Update()
+    public void Update()
     {
         //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.green);
         if (Input.GetKeyDown(KeyCode.Mouse0) && CameraZoom.look.zoomed == false)
@@ -54,15 +55,21 @@ public class Pickup : MonoBehaviour
         {
             moveObject();
         }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (CameraZoom.look.zoomed == true)
             {
                 CameraZoom.leaveComputer();
             }
+            else if (!PauseButtons.isPaused)
+            {
+                print("pausemenu");
+                pause_script.pause();
+            }
             else
             {
-                print("pausemenue");
+                pause_script.Resume();
             }
         }
     }
@@ -97,4 +104,5 @@ public class Pickup : MonoBehaviour
             heldObject = pickup;
         }
     }
+
 }
