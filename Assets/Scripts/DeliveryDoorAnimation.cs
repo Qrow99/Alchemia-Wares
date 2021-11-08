@@ -11,7 +11,7 @@ public class DeliveryDoorAnimation : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ingredient")
+        if (other.tag == "Potion")
         {
             Door.Play("Open", 0, 0f);
         }
@@ -19,7 +19,7 @@ public class DeliveryDoorAnimation : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Ingredient")
+        if (other.tag == "Potion")
         {
             Door.Play("Close", 0, 0f);
         }

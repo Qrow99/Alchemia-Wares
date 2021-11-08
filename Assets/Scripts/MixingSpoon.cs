@@ -28,6 +28,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[0], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[0].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -38,6 +39,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[1], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[1].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -48,6 +50,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[2], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[2].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -58,6 +61,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[3], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[3].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -68,6 +72,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[4], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[4].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -77,6 +82,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[11].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -87,6 +93,7 @@ public class MixingSpoon : MonoBehaviour
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -103,6 +110,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[5], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[5].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -114,6 +122,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[6], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[6].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -123,6 +132,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[11].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -133,6 +143,7 @@ public class MixingSpoon : MonoBehaviour
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -150,6 +161,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
                     new_ingredient.name = finished_potions[7].name;
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -163,6 +175,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient.name = finished_potions[8].name;
 
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -176,6 +189,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient.name = finished_potions[9].name;
 
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -186,6 +200,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient.name = finished_potions[11].name;
 
                     new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
@@ -197,6 +212,7 @@ public class MixingSpoon : MonoBehaviour
                 new_ingredient.name = finished_potions[11].name;
 
                 new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
                 respawningredients();
                 ingredients.inputs.Clear();
             }
@@ -214,6 +230,7 @@ public class MixingSpoon : MonoBehaviour
                 print("Panacea");
                 new_ingredient = Instantiate(finished_potions[10], spawnpoints[7].position, Quaternion.identity);
                 new_ingredient.name = finished_potions[10].name;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
 
                 new_ingredient.transform.parent = props.transform;
                 respawningredients();
@@ -225,18 +242,16 @@ public class MixingSpoon : MonoBehaviour
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
                 respawningredients();
                 ingredients.inputs.Clear();
             }
         }
-        else
+
+        if(new_ingredient != null)
         {
-            print("Trash Potion");
-            new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
-            new_ingredient.name = finished_potions[11].name;
-            new_ingredient.transform.parent = props.transform;
-            respawningredients();
-            ingredients.inputs.Clear();
+            print("rotate: " + new_ingredient.name);
+            
         }
     }
 

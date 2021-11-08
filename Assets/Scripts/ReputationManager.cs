@@ -15,7 +15,7 @@ public class ReputationManager : MonoBehaviour
     void Start()
     {
         reputationLevel = 1;
-        reputationprogress = 7;
+        reputationprogress = 0;
     }
 
     // Update is called once per frame
