@@ -242,7 +242,6 @@ public class MixingSpoon : MonoBehaviour
 
     void respawningredients()
     {
-
         for(int i = 0; i < ingredients.inputs.Count; i ++)
         {
             if (ingredients.inputs[i] == "Lightning in a bottle")
