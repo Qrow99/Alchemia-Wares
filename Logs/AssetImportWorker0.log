@@ -1552,3 +1552,4 @@ Received Import Request.
   path: Assets/Scripts/ReputationManager.cs
   artifactKey: Guid(20fc1a392244efd4982a90273ec5979f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/ReputationManager.cs using Guid(20fc1a392244efd4982a90273ec5979f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9918129ffe0636fc08ce9c36092fb726') in 0.009915 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
