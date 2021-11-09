@@ -12,6 +12,8 @@ public class Pickup : MonoBehaviour
     public MoveCamera CameraZoom;
     public Transform Props;
     public PauseButtons pause_script;
+    public ComputerUIManager computerScreen;
+    public GameObject crosshair;
 
     public void Update()
     {
@@ -42,6 +44,8 @@ public class Pickup : MonoBehaviour
                         //CameraZoom.cameraEndpoint = CameraZoom.playerEndpoint + zoomPosition * 1.1f;
                         CameraZoom.target = hit.transform;
                         CameraZoom.computerzoom();
+                        computerScreen.enableScreen();
+                        crosshair.SetActive(false);
                     }
                 }
             }
@@ -60,7 +64,7 @@ public class Pickup : MonoBehaviour
         {
             if (CameraZoom.look.zoomed == true)
             {
-                CameraZoom.leaveComputer();
+                close_computer();
             }
             else if (!PauseButtons.isPaused)
             {
@@ -103,6 +107,13 @@ public class Pickup : MonoBehaviour
             rig.transform.parent = holdparent;
             heldObject = pickup;
         }
+    }
+
+    public void close_computer()
+    {
+        CameraZoom.leaveComputer();
+        computerScreen.disableScreen();
+        crosshair.SetActive(true);
     }
 
 }
