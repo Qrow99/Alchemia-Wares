@@ -63399,6 +63399,18 @@ PrefabInstance:
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 60800376}
+    - target: {fileID: 1458012567286342057, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.881
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458012567286342057, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.183
+      objectReference: {fileID: 0}
+    - target: {fileID: 1458012567286342057, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.439
+      objectReference: {fileID: 0}
     - target: {fileID: 7987557117774384024, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
       propertyPath: m_Name
       value: Cauldron
