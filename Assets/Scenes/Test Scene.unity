@@ -2436,7 +2436,7 @@ GameObject:
   - component: {fileID: 662355388}
   - component: {fileID: 662355387}
   m_Layer: 0
-  m_Name: Title Text
+  m_Name: Subject Line Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7706,7 +7706,7 @@ GameObject:
   - component: {fileID: 2003625959}
   - component: {fileID: 2003625958}
   m_Layer: 0
-  m_Name: TextBox
+  m_Name: Description Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

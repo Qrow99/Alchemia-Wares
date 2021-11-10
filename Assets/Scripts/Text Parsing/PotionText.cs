@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ingredients : MonoBehaviour
+public class PotionText : MonoBehaviour
 {
-    public string ingredientName;
+    public string potionName;
     public string shortDesc;
     public string longDesc;
-    public string processingMethod; 
+    public string potionRecipe;
 }
