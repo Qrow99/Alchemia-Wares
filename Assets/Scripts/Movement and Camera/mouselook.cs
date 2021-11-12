@@ -20,7 +20,7 @@ public class mouselook : MonoBehaviour
     {
         if (zoomed == false)
         {
-            if (Input.GetKeyDown("escape"))
+            if (Input.GetKeyDown("escape") || Input.GetKeyDown(KeyCode.Tab))
             {
                 Cursor.lockState = CursorLockMode.Confined;
             }

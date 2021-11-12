@@ -13,10 +13,11 @@ public class CommissionTextParser : MonoBehaviour
     [SerializeField] TextMeshProUGUI subjectLine;
     [SerializeField] TextMeshProUGUI description;
     [SerializeField] TextMeshProUGUI numOfIngredientsText;
-    public Button prevButton;
-    public Button nextButton;
     public List<string[]> dataSheet = new List<string[]>();
     public int counter = 0;
+    public ReputationManager rm;
+    private int currentRepLevel;
+    private int currentRepProgress;
     public void Start()
     {
         //Get the file, slice it into a list of strings
@@ -28,7 +29,19 @@ public class CommissionTextParser : MonoBehaviour
             dataSheet.Add(content);
         }
         //Draw the initial text
+        currentRepLevel = 1;
+        currentRepProgress = 0; 
         DrawText();
+    }
+    public void Update()
+    {
+        if(currentRepProgress != rm.reputationprogress || currentRepLevel != rm.reputationLevel)
+        {
+            currentRepLevel = rm.reputationLevel;
+            currentRepProgress = rm.reputationprogress;
+            counter += 1;
+            DrawText();
+        }
     }
     private void DrawText()
     {
