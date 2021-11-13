@@ -56,10 +56,10 @@ public class PotionTextParser : MonoBehaviour
     }
     private void DrawText()
     {
-            potionName.text = dataSheet[currentPage][0];
-            shortDesc.text = dataSheet[currentPage][1];
-            longDesc.text = dataSheet[currentPage][2];
-            potionEquation.text = dataSheet[currentPage][3];
+        potionName.text = dataSheet[currentPage][0];
+        shortDesc.text = dataSheet[currentPage][1];
+        longDesc.text = dataSheet[currentPage][2];
+        potionEquation.text = dataSheet[currentPage][3];
     }
     private void ShowHideButtons()
     {

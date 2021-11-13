@@ -217,7 +217,7 @@ public class MixingSpoon : MonoBehaviour
                 ingredients.inputs.Clear();
             }
         }
-        else if (ingredients.inputs.Count == 6)
+        else if (ingredients.inputs.Count == 8)
         {
             //Solace Sage + Cyclops Eye + Powdered Achia Seed +Vampire tears + Griffin claws + Jormungandr Scales = Panacea
             if (ingredients.inputs.Contains("Griffin claws") &&
@@ -225,7 +225,9 @@ public class MixingSpoon : MonoBehaviour
                 ingredients.inputs.Contains("Vampire Tears") &&
                 ingredients.inputs.Contains("Powdered Achia Seed") &&
                 ingredients.inputs.Contains("Cyclops Eye") &&
-                ingredients.inputs.Contains("Solace Sage"))
+                ingredients.inputs.Contains("Solace Sage") &&
+                ingredients.inputs.Contains("Nightshade") && 
+                ingredients.inputs.Contains("Lightning in a bottle"))
             {
                 print("Panacea");
                 new_ingredient = Instantiate(finished_potions[10], spawnpoints[7].position, Quaternion.identity);
