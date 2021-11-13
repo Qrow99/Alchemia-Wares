@@ -43,7 +43,7 @@ public class IngredientTextParser : MonoBehaviour
     }
     public void Update()
     {
-        ShowHideButtons();
+        //ShowHideButtons();
     }
     public void GoNext()
     {

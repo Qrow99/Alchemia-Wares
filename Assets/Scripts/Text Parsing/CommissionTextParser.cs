@@ -18,8 +18,14 @@ public class CommissionTextParser : MonoBehaviour
     public ReputationManager rm;
     private int currentRepLevel;
     private int currentRepProgress;
+    public Button prevButton;
+    public Button nextButton;
     public void Start()
     {
+        Button next = nextButton.GetComponent<Button>();
+        Button prev = prevButton.GetComponent<Button>();
+        next.onClick.AddListener(GoNext);
+        prev.onClick.AddListener(GoPrev);
         //Get the file, slice it into a list of strings
         string readFromFilePath = Application.dataPath + "/Imported Text Assets/" + "Commission Requests" + ".txt";
         List<string> fileLines = File.ReadAllLines(readFromFilePath).ToList();
@@ -29,17 +35,33 @@ public class CommissionTextParser : MonoBehaviour
             dataSheet.Add(content);
         }
         //Draw the initial text
-        currentRepLevel = 1;
-        currentRepProgress = 0; 
+        //currentRepLevel = 1;
+        //currentRepProgress = 0; 
         DrawText();
     }
     public void Update()
     {
-        if(currentRepProgress != rm.reputationprogress || currentRepLevel != rm.reputationLevel)
+        //if(currentRepProgress != rm.reputationprogress || currentRepLevel != rm.reputationLevel)
+        //{
+        //    currentRepLevel = rm.reputationLevel;
+        //    currentRepProgress = rm.reputationprogress;
+        //    counter += 1;
+        //    DrawText();
+        //}
+    }
+    public void GoNext()
+    {
+        if (counter < 10)
         {
-            currentRepLevel = rm.reputationLevel;
-            currentRepProgress = rm.reputationprogress;
             counter += 1;
+            DrawText();
+        }
+    }
+    public void GoPrev()
+    {
+        if (counter > 0)
+        {
+            counter -= 1;
             DrawText();
         }
     }

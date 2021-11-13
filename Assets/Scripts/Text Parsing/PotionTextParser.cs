@@ -40,7 +40,7 @@ public class PotionTextParser : MonoBehaviour
     //LINK THIS UP WITH REP SYSTEM
     public void GoNext()
     {
-        if (currentPage < 11)
+        if (currentPage < 10)
         {
             currentPage += 1;
             DrawText();
