@@ -33,5 +33,6 @@ public class ComputerUIManager : MonoBehaviour
     {
         computerScreen.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+
     }
 }

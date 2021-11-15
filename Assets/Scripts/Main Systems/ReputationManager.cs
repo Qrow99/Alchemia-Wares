@@ -57,6 +57,17 @@ public class ReputationManager : MonoBehaviour
                 new_ingredient = Instantiate(respawn_ingredients[4], spawnpoints[4].position, Quaternion.identity);
                 new_ingredient.name = respawn_ingredients[4].name;
                 new_ingredient.transform.parent = props.transform;
+
+                new_ingredient = Instantiate(respawn_ingredients[5], spawnpoints[5].position, Quaternion.identity);
+                new_ingredient.name = respawn_ingredients[5].name;
+                new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(0f,90f,0f);
+                new_ingredient.transform.localScale = new Vector3(0.19f,0.18f,0.18f);
+
+                new_ingredient = Instantiate(respawn_ingredients[6], spawnpoints[6].position, Quaternion.identity);
+                new_ingredient.name = respawn_ingredients[6].name;
+                new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0f, 0f);
             }
             //at level 5 and 6 no new ingredients
             reputationprogress -= 2;

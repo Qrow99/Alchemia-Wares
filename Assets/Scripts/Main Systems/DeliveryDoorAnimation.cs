@@ -5,6 +5,7 @@ using UnityEngine;
 public class DeliveryDoorAnimation : MonoBehaviour
 {
     public Animator Door;
+    public bool isopen = false;
 
     void Update()
     {
@@ -13,7 +14,16 @@ public class DeliveryDoorAnimation : MonoBehaviour
     {
         if (other.tag == "Potion")
         {
+            openDoor();
+        }
+    }
+
+    public void openDoor()
+    {
+        if(!isopen)
+        {
             Door.Play("Open", 0, 0f);
+            isopen = true;
         }
     }
 
@@ -21,7 +31,16 @@ public class DeliveryDoorAnimation : MonoBehaviour
     {
         if (other.tag == "Potion")
         {
+            closeDoor();
+        }
+    }
+
+    public void closeDoor()
+    {
+        if(isopen)
+        {
             Door.Play("Close", 0, 0f);
+            isopen = false;
         }
     }
 }

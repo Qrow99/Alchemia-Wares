@@ -87,6 +87,10 @@ public class MixingSpoon : MonoBehaviour
                     ingredients.inputs.Clear();
                 }
             }
+            else if(ingredients.inputs.Contains("Coffee") && ingredients.inputs.Contains("Doughnut"))
+            {
+                print("caffine concoction");
+            }
             else
             {
                 print("Trash Potion");
@@ -257,7 +261,7 @@ public class MixingSpoon : MonoBehaviour
         }
     }
 
-    void respawningredients()
+    public void respawningredients()
     {
         for(int i = 0; i < ingredients.inputs.Count; i ++)
         {
@@ -276,6 +280,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 new_ingredient = Instantiate(respawn_ingredients[4], spawnpoints[4].position, Quaternion.identity);
                 new_ingredient.name = respawn_ingredients[4].name;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
             }
             else if (ingredients.inputs[i] == "Solace Sage")
             {
@@ -296,6 +301,13 @@ public class MixingSpoon : MonoBehaviour
             {
                 new_ingredient = Instantiate(respawn_ingredients[0], spawnpoints[0].position, Quaternion.identity);
                 new_ingredient.name = respawn_ingredients[0].name;
+                new_ingredient.transform.Rotate(90f, 0, 0);
+            }
+            else if(ingredients.inputs[i] == "Jormungandr Scales")
+            {
+                new_ingredient = Instantiate(respawn_ingredients[7], spawnpoints[8].position, Quaternion.identity);
+                new_ingredient.name = respawn_ingredients[7].name;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
             }
             new_ingredient.transform.parent = props.transform;
         }

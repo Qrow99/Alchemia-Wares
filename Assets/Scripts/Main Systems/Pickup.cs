@@ -95,7 +95,7 @@ public class Pickup : MonoBehaviour
         }
     }
 
-    void dropObject()
+    public void dropObject()
     {
         Rigidbody heldrig = heldObject.GetComponent<Rigidbody>();
         heldrig.useGravity = true;

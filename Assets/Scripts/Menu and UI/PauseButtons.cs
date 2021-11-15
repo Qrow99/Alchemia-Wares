@@ -23,6 +23,7 @@ public class PauseButtons : MonoBehaviour
         PauseUI.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void quit()

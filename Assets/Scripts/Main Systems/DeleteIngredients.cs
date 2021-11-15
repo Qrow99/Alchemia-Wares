@@ -51,6 +51,12 @@ public class DeleteIngredients : MonoBehaviour
                 new_ingredient = Instantiate(ingredients[0], spawnpoints[0].position, Quaternion.identity);
                 new_ingredient.name = ingredients[0].name;
             }
+            else if (deleted == "Jormungandr Scales")
+            {
+                new_ingredient = Instantiate(ingredients[7], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = ingredients[7].name;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
+            }
             Destroy(other.gameObject);
             new_ingredient.transform.parent = props.transform;
         }

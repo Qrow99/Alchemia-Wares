@@ -41,7 +41,14 @@ public class SelectionManager : MonoBehaviour
                     Selection = Selected;
                     crosshair.GetComponent<Image>().color = Color.red;
                     itemname.SetActive(true);
-                    itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
+                    if(Selected.name != "20_20 potion")
+                    {
+                        itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
+                    }
+                    else
+                    {
+                        itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "20/20 Potion";
+                    }
                 }
             }
             else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Mixing Spoon")) //check if the thing hit by raycast is a mixing spoon

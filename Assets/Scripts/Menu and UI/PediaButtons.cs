@@ -23,5 +23,6 @@ public class PediaButtons : MonoBehaviour
         PediaUI.SetActive(false);
         Time.timeScale = 1;
         isPedia = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
