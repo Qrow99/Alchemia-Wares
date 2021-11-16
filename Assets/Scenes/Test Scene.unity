@@ -2410,9 +2410,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 13471620}
+      - m_Target: {fileID: 13471618}
         m_TargetAssemblyTypeName: PauseButtons, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5637,6 +5637,329 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943188596}
   m_CullTransparentMesh: 1
+--- !u!1 &956367018
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 956367020}
+  - component: {fileID: 956367019}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &956367019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956367018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 483f1492b34d2eb4dbc115ca0b337c77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: bottle1
+    clip: {fileID: 8300000, guid: 7c2eb5e8637cb0e46a9cfa11242090f1, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 75
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: bottle2
+    clip: {fileID: 8300000, guid: a349b113c955de94f95017fb395c6849, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 75
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: bottle3
+    clip: {fileID: 8300000, guid: 59036509b3e5782449a69c594b959fa2, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 75
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: crushy_2
+    clip: {fileID: 8300000, guid: 6a9b498bfb9c238498e9dcd2b5b025a8, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: crushy_mortar
+    clip: {fileID: 8300000, guid: 2f79e5891af153a49b73a3f5785f8977, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 0
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: crushy_mortar_2
+    clip: {fileID: 8300000, guid: ff941f08209b8f24b92cda6ae6413a81, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: door1
+    clip: {fileID: 8300000, guid: a080f7542d6dd7c4c93772a5b3c4277e, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: door2
+    clip: {fileID: 8300000, guid: 9cb7220ee4feb2a4a9e42890ac6a483f, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: idea2
+    clip: {fileID: 8300000, guid: acb91b9f1e0fa324b918ea7bb4ff2df5, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: is_this_cleanup
+    clip: {fileID: 8300000, guid: f3dd2ae884bfacd4fb4a208a27e3b3ae, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: lo_fi_take_two
+    clip: {fileID: 8300000, guid: 86045a418db57844d965807985f5bb66, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 25
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: more_bottle
+    clip: {fileID: 8300000, guid: 209ea54302f7dd24bbdd66a190a866a1, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mortar1
+    clip: {fileID: 8300000, guid: f4d4beaa6ebdab74c9b4cf766cf01d5c, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mortar2
+    clip: {fileID: 8300000, guid: bd94b272235ef0d429687f0a5cdd6780, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mortar3
+    clip: {fileID: 8300000, guid: 2221c12072ba2ab439b6e89510e8c0b2, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: motor1
+    clip: {fileID: 8300000, guid: 249392673e873a646b4ca1b25d103892, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: motor2
+    clip: {fileID: 8300000, guid: 09932c330e383c446bd7c41734ee7789, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mouse_click
+    clip: {fileID: 8300000, guid: c699be6dd6ab93b4f841671aa71b9b51, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mouse_click_2
+    clip: {fileID: 8300000, guid: 62e9ca4aa5e95fa4981debaedb9fb087, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mouse_click_raw
+    clip: {fileID: 8300000, guid: f160115aad632494ba4b58901e636d35, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: mouse_click_raw2
+    clip: {fileID: 8300000, guid: 1ccd28217de271941a95d65f26fc1551, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: pneumatic_tube_idea
+    clip: {fileID: 8300000, guid: 107adbeae42eb5c4a8b804c371a7c5af, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: pops
+    clip: {fileID: 8300000, guid: 8878dc72c7461f8448bfdc8763ab72d8, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: s2
+    clip: {fileID: 8300000, guid: 4550244df8032064285e3b0f51fc7a0b, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: s3
+    clip: {fileID: 8300000, guid: d8781b23a975e8540999025b5242cb8b, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: s4
+    clip: {fileID: 8300000, guid: c6d64e70addcbf747a8c03eb26a93b32, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: slide_door
+    clip: {fileID: 8300000, guid: 8b8a697196732a0418dd4c93ec207e45, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: sound_sampling
+    clip: {fileID: 8300000, guid: adef320d374406c47822fbe0c74d2fee, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: splash
+    clip: {fileID: 8300000, guid: 5c0a7d3369bb14e4bbc4b0279afcee43, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 100
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: tube_echo
+    clip: {fileID: 8300000, guid: b41a0cff25486984296259792e77d803, type: 3}
+    playOnAwake: 0
+    loop: 0
+    volume: 50
+    pitch: 0
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+  - name: wtf_the_fat_rat
+    clip: {fileID: 8300000, guid: 4285fef19c6cdb74e8c88c608ce3761a, type: 3}
+    playOnAwake: 0
+    loop: 1
+    volume: 25
+    pitch: 0.1
+    spatialBlend: 0
+    source: {fileID: 0}
+    ogVolume: 0
+--- !u!4 &956367020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956367018}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &958574548
 GameObject:
   m_ObjectHideFlags: 0
@@ -7645,7 +7968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1332424897
 RectTransform:
   m_ObjectHideFlags: 0
