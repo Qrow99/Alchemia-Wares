@@ -22,10 +22,11 @@ public class PotionTextParser : MonoBehaviour
     public void Start()
     {
         //Initialize the buttons
-        Button next = nextButton.GetComponent<Button>();
-        Button prev = prevButton.GetComponent<Button>();
-        next.onClick.AddListener(GoNext);
-        prev.onClick.AddListener(GoPrev);
+        //Button next = nextButton.GetComponent<Button>();
+        //Button prev = prevButton.GetComponent<Button>();
+        nextButton.onClick.AddListener(GoNext);
+        prevButton.onClick.AddListener(GoPrev);
+        prevButton.gameObject.SetActive(false);
         //Get the file, slice it into a list of strings
         string readFromFilePath = Application.dataPath + "/Imported Text Assets/" + "Potion Descriptions" + ".txt";
         List<string> fileLines = File.ReadAllLines(readFromFilePath).ToList();
@@ -40,18 +41,34 @@ public class PotionTextParser : MonoBehaviour
     //LINK THIS UP WITH REP SYSTEM
     public void GoNext()
     {
+        // if prevButton isn't active, always set it to active when you click nextButton
+        if (!prevButton.gameObject.activeSelf) {
+            prevButton.gameObject.SetActive(true);
+        }
         if (currentPage < 10)
         {
             currentPage += 1;
             DrawText();
-        }
+            // if we are at the last page, set the nextButton to inactive
+            if(currentPage == 10) {
+                nextButton.gameObject.SetActive(false);
+            }
+        } 
     }
     public void GoPrev()
     {
+        // if nextButton isn't active, always set it to active when you click prevButton
+        if (!nextButton.gameObject.activeSelf) {
+            nextButton.gameObject.SetActive(true);
+        }
         if (currentPage > 0)
         {
             currentPage -= 1;
             DrawText();
+            // if we are at the first page, set the prevButton to inactive
+            if(currentPage == 0) {
+                prevButton.gameObject.SetActive(false);
+            }
         }
     }
     private void DrawText()
