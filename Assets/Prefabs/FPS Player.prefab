@@ -182,6 +182,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   CameraZoom: {fileID: 1973651079}
+  Props: {fileID: 0}
+  pause_script: {fileID: 0}
+  pedia_script: {fileID: 0}
+  computerScreen: {fileID: 0}
+  crosshair: {fileID: 0}
 --- !u!114 &283392448378960075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +236,8 @@ MonoBehaviour:
     m_Bits: 256
   highlight: {fileID: 2100000, guid: 61e12291d313198428753cc71d1e1b02, type: 2}
   maincamera: {fileID: 283392448378960079}
-  defaultMaterial: {fileID: 0}
+  crosshair: {fileID: 0}
+  itemname: {fileID: 0}
 --- !u!1 &283392449083664878
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,13 +326,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd8079de1d917dd43ac2d4071dd6e39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraEndpoint: {x: 0.68, y: 3.285, z: -4.949}
-  playerEndpoint: {x: 0.565, y: 2.41, z: -4.112}
   speed: 0.75
   player: {fileID: 283392449083664875}
   Playercamera: {fileID: 283392448378960077}
   look: {fileID: 283392448378960073}
-  direction: 180
+  target: {fileID: 0}
 --- !u!1 &283392449594107296
 GameObject:
   m_ObjectHideFlags: 0

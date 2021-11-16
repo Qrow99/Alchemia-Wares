@@ -22,6 +22,7 @@ public class mouselook : MonoBehaviour
         {
             if (Input.GetKeyDown("escape") || Input.GetKeyDown(KeyCode.Tab))
             {
+                
                 Cursor.lockState = CursorLockMode.Confined;
             }
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
@@ -32,10 +33,10 @@ public class mouselook : MonoBehaviour
 
             transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
             PlayerBody.Rotate(Vector3.up * mouseX);
-        }   
+        }
         //if (zoomed)
         //{
-            //print("zoomed");
+        //print("zoomed");
         //}
 
     }

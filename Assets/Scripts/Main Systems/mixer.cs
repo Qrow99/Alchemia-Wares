@@ -11,6 +11,7 @@ public class mixer : MonoBehaviour
         if (other.tag ==  "Ingredient")
         {
             print(other.name);
+            FindObjectOfType<AudioManager>().Play("splash");
             if(inputs.Count < 6)
             {
                 inputs.Add(other.gameObject.name);

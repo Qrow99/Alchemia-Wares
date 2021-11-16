@@ -17,6 +17,7 @@ public class MixingSpoon : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
+        //FindObjectOfType<AudioManager>().Play("m");
         if (ingredients.inputs.Count == 2)
         {
             if (ingredients.inputs.Contains("Nightshade"))
@@ -43,6 +44,7 @@ public class MixingSpoon : MonoBehaviour
                     respawningredients();
                     ingredients.inputs.Clear();
                 }
+
                 //Nightshade + Powdered Achia Seed = Witch Hazel
                 else if (ingredients.inputs.Contains("Powdered Achia Seed"))
                 {

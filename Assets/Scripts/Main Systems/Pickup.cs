@@ -29,7 +29,7 @@ public class Pickup : MonoBehaviour
                 {
 
 
-                    //Debug.Log("Object " + hit.transform.gameObject.name + "\nLayer " + hit.transform.gameObject.layer);
+                    //Debug.Log("Object: " + hit.transform.gameObject.name + "\nLayer: " + hit.transform.gameObject.layer);
                     //Debug.Log("Object Parent " + hit.transform.parent.name);
 
 
@@ -37,8 +37,15 @@ public class Pickup : MonoBehaviour
                     if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Pickups"))
                     {
                         PickupObject(hit.transform.gameObject);
-                    }
-                    else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer") || hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame"))
+                        if (hit.transform.gameObject.CompareTag("Potion"))
+                        {
+                            print("picking up bottle");
+                            string bottleNum = "bottle" + (Random.Range(1, 6) % 3 + 1).ToString();
+                            print(bottleNum);
+                            FindObjectOfType<AudioManager>().Play(bottleNum);
+                        }
+                    } 
+                    else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer"))// || hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame"))
                     {
                         //Vector3 zoomPosition = hit.transform.parent.forward * 1f;
                         //CameraZoom.playerEndpoint = hit.transform.position + zoomPosition;    
@@ -67,13 +74,18 @@ public class Pickup : MonoBehaviour
             {
                 close_computer();
             }
+            // if the game is not paused, then pause
             else if (!PauseButtons.isPaused)
             {
                 print("pausemenu");
+                // When the player presses escape to open the pause menu, lower the track
+                FindObjectOfType<AudioManager>().ChangeVolume("lo_fi_take_two", 10);
                 pause_script.pause();
             }
             else
             {
+                // When the player resumes from the pause menu, bring the volume back up
+                FindObjectOfType<AudioManager>().OriginalVolume("lo_fi_take_two");
                 pause_script.Resume();
             }
         }
