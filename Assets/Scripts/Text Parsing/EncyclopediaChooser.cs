@@ -15,10 +15,10 @@ public class EncyclopediaChooser : MonoBehaviour
     public void Start()
     {
         //Initialize buttons
-        Button potion = potionButton.GetComponent<Button>();
-        Button ingredients = ingredientsButton.GetComponent<Button>();
-        potion.onClick.AddListener(goPotion);
-        ingredients.onClick.AddListener(goIngredients);
+        //Button potion = potionButton.GetComponent<Button>();
+        //Button ingredients = ingredientsButton.GetComponent<Button>();
+        potionButton.onClick.AddListener(goPotion);
+        ingredientsButton.onClick.AddListener(goIngredients);
         goIngredients(); 
     }
     public void goPotion()

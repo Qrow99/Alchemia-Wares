@@ -30,6 +30,7 @@ public class potionSender : MonoBehaviour
     {
         print("start counter");
         yield return new WaitForSeconds(5f);
+        FindObjectOfType<AudioManager>().Play("pneumatic_tube_idea");
         print("destroy potion");
         Destroy(other);
     }

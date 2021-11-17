@@ -17,7 +17,7 @@ public class MixingSpoon : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-        //FindObjectOfType<AudioManager>().Play("m");
+       FindObjectOfType<AudioManager>().Play("pops");
         if (ingredients.inputs.Count == 2)
         {
             if (ingredients.inputs.Contains("Nightshade"))

@@ -72,17 +72,17 @@ public class SelectionManager : MonoBehaviour
                 itemname.SetActive(true);
                 itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Send Potion";
             }
-            else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame")) //check if the thing hit by raycast is a computer
-            {
-                Selection = Selected;
-                while (Selected.parent.name != "Minigame Stuff")
-                {
-                    Selected = Selected.parent;
-                }
-                crosshair.GetComponent<Image>().color = Color.red;
-                itemname.SetActive(true);
-                itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
-            }
+            //else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame")) //check if the thing hit by raycast is a computer
+            //{
+            //    Selection = Selected;
+            //    while (Selected.parent.name != "Minigame Stuff")
+            //    {
+            //        Selected = Selected.parent;
+            //    }
+            //    crosshair.GetComponent<Image>().color = Color.red;
+            //    itemname.SetActive(true);
+            //    itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
+            //}
             else
             {
                 crosshair.GetComponent<Image>().color = Color.green;

@@ -5860,7 +5860,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 107adbeae42eb5c4a8b804c371a7c5af, type: 3}
     playOnAwake: 0
     loop: 0
-    volume: 50
+    volume: 100
     pitch: 0
     spatialBlend: 0
     source: {fileID: 0}
@@ -5869,7 +5869,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8878dc72c7461f8448bfdc8763ab72d8, type: 3}
     playOnAwake: 0
     loop: 0
-    volume: 50
+    volume: 100
     pitch: 0
     spatialBlend: 0
     source: {fileID: 0}
@@ -5923,7 +5923,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 5c0a7d3369bb14e4bbc4b0279afcee43, type: 3}
     playOnAwake: 0
     loop: 0
-    volume: 100
+    volume: 60
     pitch: 0
     spatialBlend: 0
     source: {fileID: 0}
@@ -6553,6 +6553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   computerScreen: {fileID: 2018006445}
   current_commision: 0
+  commissions: {fileID: 1328332860}
 --- !u!1001 &1088994545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25232,7 +25233,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1711871907845643321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75032de7f5479254192826ca8e0c7715, type: 3}
+  m_Script: {fileID: 11500000, guid: 0dbae18bf25d23f4285a231a9f4c352f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rep: {fileID: 1536335911}
