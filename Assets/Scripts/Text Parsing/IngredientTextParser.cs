@@ -20,7 +20,8 @@ public class IngredientTextParser : MonoBehaviour
     [SerializeField] TextMeshProUGUI processingMethod2;
     public Button prevButton;
     public Button nextButton; 
-    public List<string[]> dataSheet = new List<string[]>();
+    public List<string[]> dataSheet = new List<string[]>(); //Imported text goes here
+    public List<string[]> currentlyAvailable = new List<string[]>(); //What's currently available, based on reputation.
     public int currentPage = 0; //Essentially just page number
     public ReputationManager rm; 
     public void Start()
@@ -37,12 +38,16 @@ public class IngredientTextParser : MonoBehaviour
             string[] content = line.Split('\t');
             dataSheet.Add(content); 
         }
+        currentlyAvailable.Add(dataSheet[0]);
+        currentlyAvailable.Add(dataSheet[1]);
+        //The first two ingredients will be added to the currently available list on start.
+
         //Draw the initial text
         DrawText(); 
     }
-    public void Update()
+    private void Update()
     {
-        //ShowHideButtons();
+        //If ReputationManager's reputationLevel attribute changed, drawText again?
     }
 
     public void GoNext() {
@@ -86,61 +91,5 @@ public class IngredientTextParser : MonoBehaviour
             longDesc2.text = dataSheet[currentPage*2 + 1][2];
             processingMethod2.text = dataSheet[currentPage*2 + 1][3];
     }
-    private void ShowHideButtons() //Shows and hides buttons based on current reputation level. 
-    {
-        if(currentPage == 0 && rm.reputationLevel == 1 && rm.reputationprogress == 0) //Initial state
-        {
-            prevButton.gameObject.SetActive(false);
-            nextButton.gameObject.SetActive(false);
-        }
-        else if(rm.reputationLevel == 2 && rm.reputationprogress == 0) //First 2 ingredients unlocked
-        {
-            if (currentPage == 0)
-            {
-                nextButton.gameObject.SetActive(true);
-                prevButton.gameObject.SetActive(false);
-            }
-            else //On page 1, prevent going to next page but allow going to previous page
-            {
-                nextButton.gameObject.SetActive(false);
-                prevButton.gameObject.SetActive(true);
-            }
-        }
-        else if(rm.reputationLevel == 3 && rm.reputationprogress == 0)
-        {
-            if (currentPage == 0)
-            {
-                nextButton.gameObject.SetActive(true);
-                prevButton.gameObject.SetActive(false);
-            }
-            else if (currentPage == 1)
-            {
-                nextButton.gameObject.SetActive(true);
-                prevButton.gameObject.SetActive(true);
-            }
-            else
-            {
-                nextButton.gameObject.SetActive(false);
-                prevButton.gameObject.SetActive(true);
-            }
-        }
-        else
-        {
-            if (currentPage == 0)
-            {
-                nextButton.gameObject.SetActive(true);
-                prevButton.gameObject.SetActive(false);
-            }
-            else if (currentPage == 1 || currentPage == 2)
-            {
-                nextButton.gameObject.SetActive(true);
-                prevButton.gameObject.SetActive(true);
-            }
-            else
-            {
-                nextButton.gameObject.SetActive(false);
-                prevButton.gameObject.SetActive(true);
-            }
-        }
-    }
+    
 }

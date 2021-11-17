@@ -8,7 +8,6 @@ using TMPro;
 
 public class CommissionTextParser : MonoBehaviour
 {
-    //Witchipedia displays 2 ingredients per page
     [SerializeField] TextMeshProUGUI commissionerName;
     [SerializeField] TextMeshProUGUI subjectLine;
     [SerializeField] TextMeshProUGUI description;
