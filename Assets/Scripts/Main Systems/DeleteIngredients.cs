@@ -11,54 +11,181 @@ public class DeleteIngredients : MonoBehaviour
     private GameObject new_ingredient;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Ingredient")
+        print(other.gameObject.name);
+        deleted = other.gameObject.name;
+        if (other.tag == "Ingredient")
         {
-            print(other.gameObject.name);
-            deleted = other.gameObject.name;
             if (deleted == "Lightning in a bottle")
             {
-                new_ingredient = Instantiate(ingredients[2], spawnpoints[2].position, Quaternion.identity);
-                new_ingredient.name = ingredients[2].name;
+                RespawnLIB();
             }
             else if (deleted == "Vampire Tears")
             {
-                new_ingredient = Instantiate(ingredients[6], spawnpoints[6].position, Quaternion.identity);
-                new_ingredient.transform.Rotate(-90f, 0,0);
-                new_ingredient.name = ingredients[6].name;
+                RespawnVamp();
             }
             else if (deleted == "Powdered Achia Seed")
             {
-                new_ingredient = Instantiate(ingredients[4], spawnpoints[4].position, Quaternion.identity);
-                new_ingredient.name = ingredients[4].name;
+                RespawnAchia();
             }
             else if(deleted == "Solace Sage")
             {
-                new_ingredient = Instantiate(ingredients[5], spawnpoints[5].position, Quaternion.identity);
-                new_ingredient.name = ingredients[5].name;
+                RespawnSolace();
             }
             else if (deleted == "Griffin claws")
             {
-                new_ingredient = Instantiate(ingredients[1], spawnpoints[1].position, Quaternion.identity);
-                new_ingredient.name = ingredients[1].name;
+                RespawnClaws();
             }
             else if (deleted == "Nightshade")
             {
-                new_ingredient = Instantiate(ingredients[3], spawnpoints[3].position, Quaternion.identity);
-                new_ingredient.name = ingredients[3].name;
+                RespawnNightshade();
             }
             else if (deleted == "Cyclops Eye")
             {
-                new_ingredient = Instantiate(ingredients[0], spawnpoints[0].position, Quaternion.identity);
-                new_ingredient.name = ingredients[0].name;
+                RespawnEye();
             }
             else if (deleted == "Jormungandr Scales")
             {
-                new_ingredient = Instantiate(ingredients[7], spawnpoints[7].position, Quaternion.identity);
-                new_ingredient.name = ingredients[7].name;
-                new_ingredient.transform.Rotate(-90f, 0, 0);
+                RespawnScale();
             }
             Destroy(other.gameObject);
-            new_ingredient.transform.parent = props.transform;
+            
         }
+        else if (other.tag == "Potion")
+        {
+            if(deleted == "20_20 potion")
+            {
+                RespawnNightshade();
+                RespawnEye();
+            }
+            else if(deleted == "Arnold Extract")
+            {
+                RespawnClaws();
+                RespawnLIB();
+                RespawnNightshade();
+                RespawnSolace();
+            }
+            else if(deleted == "Caffine Concoction")
+            {
+                //respawn doughnut and coffee
+            }
+            else if(deleted == "Good Trip")
+            {
+                RespawnEye();
+                RespawnLIB();
+                RespawnEye();
+            }
+            else if(deleted == "Good Vibes Potion")
+            {
+                RespawnNightshade();
+                RespawnVamp();
+            }
+            else if(deleted == "Griffin Balm Potion")
+            {
+                RespawnNightshade();
+                RespawnClaws();
+            }
+            else if(deleted == "Laganja Extravaganza")
+            {
+                RespawnSolace();
+                RespawnEye();
+                RespawnVamp();
+                RespawnScale();
+            }
+            else if(deleted == "Melancholy Tonic")
+            {
+                RespawnScale();
+                RespawnVamp();
+                RespawnSolace();
+            }
+            else if(deleted == "Panacea")
+            {
+                RespawnSolace();
+                RespawnEye();
+                RespawnAchia();
+                RespawnVamp();
+                RespawnClaws();
+                RespawnScale();
+            }
+            else if(deleted == "Potion of common healing")
+            {
+                RespawnNightshade();
+                RespawnSolace();
+            }
+            else if(deleted == "Sike Potion")
+            {
+                RespawnSolace();
+                RespawnClaws();
+                RespawnScale();
+                RespawnLIB();
+            }
+            else if(deleted == "Witch Hazel")
+            {
+                RespawnNightshade();
+                RespawnAchia();
+            }
+            else if(deleted == "Trash Potion")
+            {
+                print("Trash");
+            }
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void RespawnLIB()
+    {
+        new_ingredient = Instantiate(ingredients[2], spawnpoints[2].position, Quaternion.identity);
+        new_ingredient.name = ingredients[2].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnVamp()
+    {
+        new_ingredient = Instantiate(ingredients[6], spawnpoints[6].position, Quaternion.identity);
+        new_ingredient.transform.Rotate(-90f, 0, 0);
+        new_ingredient.name = ingredients[6].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+    
+    private void RespawnAchia()
+    {
+        new_ingredient = Instantiate(ingredients[4], spawnpoints[4].position, Quaternion.identity);
+        new_ingredient.name = ingredients[4].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnSolace()
+    {
+        new_ingredient = Instantiate(ingredients[5], spawnpoints[5].position, Quaternion.identity);
+        new_ingredient.name = ingredients[5].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnClaws()
+    {
+        new_ingredient = Instantiate(ingredients[1], spawnpoints[1].position, Quaternion.identity);
+        new_ingredient.name = ingredients[1].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnNightshade()
+    {
+        new_ingredient = Instantiate(ingredients[3], spawnpoints[3].position, Quaternion.identity);
+        new_ingredient.name = ingredients[3].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnEye()
+    {
+        new_ingredient = Instantiate(ingredients[0], spawnpoints[0].position, Quaternion.identity);
+        new_ingredient.name = ingredients[0].name;
+        new_ingredient.transform.parent = props.transform;
+    }
+
+    private void RespawnScale()
+    {
+        new_ingredient = Instantiate(ingredients[7], spawnpoints[7].position, Quaternion.identity);
+        new_ingredient.name = ingredients[7].name;
+        new_ingredient.transform.Rotate(-90f, 0, 0);
+        new_ingredient.transform.parent = props.transform;
     }
 }
