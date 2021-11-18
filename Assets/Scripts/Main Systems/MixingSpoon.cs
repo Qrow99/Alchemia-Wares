@@ -92,6 +92,12 @@ public class MixingSpoon : MonoBehaviour
             else if(ingredients.inputs.Contains("Coffee") && ingredients.inputs.Contains("Doughnut"))
             {
                 print("caffine concoction");
+                new_ingredient = Instantiate(finished_potions[12], spawnpoints[7].position, Quaternion.identity);
+                new_ingredient.name = finished_potions[12].name;
+                new_ingredient.transform.parent = props.transform;
+                new_ingredient.transform.Rotate(-90f, 0, 0);
+                respawningredients();
+                ingredients.inputs.Clear();
             }
             else
             {
