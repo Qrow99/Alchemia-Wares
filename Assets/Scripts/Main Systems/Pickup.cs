@@ -15,6 +15,7 @@ public class Pickup : MonoBehaviour
     public PediaButtons pedia_script; 
     public ComputerUIManager computerScreen;
     public GameObject crosshair;
+    public GameObject TutorialText;
 
     public void Update()
     {
@@ -54,6 +55,10 @@ public class Pickup : MonoBehaviour
                         CameraZoom.computerzoom();
                         computerScreen.enableScreen();
                         crosshair.SetActive(false);
+                        if (TutorialText)
+                        {
+                            Destroy(TutorialText);
+                        }
                     }
                 }
             }
@@ -70,6 +75,10 @@ public class Pickup : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) //Pause menu. Closes computer if zoomed in
         {
+            if (TutorialText)
+            {
+                Destroy(TutorialText);
+            }
             if (CameraZoom.look.zoomed == true)
             {
                 close_computer();
@@ -91,6 +100,10 @@ public class Pickup : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Tab)) //Witchipedia menu. Closes computer then enters Witchipedia if zoomed in
         {
+            if(TutorialText)
+            {
+                Destroy(TutorialText);
+            }
             if(CameraZoom.look.zoomed == true)
             {
                 close_computer();
