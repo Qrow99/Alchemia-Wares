@@ -16,6 +16,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private Camera maincamera;
     [SerializeField] private GameObject crosshair;
     [SerializeField] private GameObject itemname;
+    [SerializeField] private GameObject TutorialText;
 
     private void Start()
     {
@@ -41,7 +42,11 @@ public class SelectionManager : MonoBehaviour
                     Selection = Selected;
                     crosshair.GetComponent<Image>().color = Color.red;
                     itemname.SetActive(true);
-                    if(Selected.name != "20_20 potion")
+                    if(TutorialText)
+                    {
+                        TutorialText.SetActive(false);
+                    }
+                    if (Selected.name != "20_20 potion")
                     {
                         itemname.GetComponent<TMPro.TextMeshProUGUI>().text = Selected.name;
                     }
@@ -57,6 +62,10 @@ public class SelectionManager : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 itemname.SetActive(true);
                 itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Mix Ingredients";
+                if (TutorialText)
+                {
+                    TutorialText.SetActive(false);
+                }
             }
             else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Computer")) //check if the thing hit by raycast is a computer
             {
@@ -64,6 +73,10 @@ public class SelectionManager : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 itemname.SetActive(true);
                 itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Tricks and Treats.com";
+                if (TutorialText)
+                {
+                    TutorialText.SetActive(false);
+                }
             }
             else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Send Potion")) //check if the thing hit by raycast is a computer
             {
@@ -71,6 +84,10 @@ public class SelectionManager : MonoBehaviour
                 crosshair.GetComponent<Image>().color = Color.red;
                 itemname.SetActive(true);
                 itemname.GetComponent<TMPro.TextMeshProUGUI>().text = "Send Potion";
+                if (TutorialText)
+                {
+                    TutorialText.SetActive(false);
+                }
             }
             //else if (Hit.transform.gameObject.layer == LayerMask.NameToLayer("Minigame")) //check if the thing hit by raycast is a computer
             //{
@@ -87,6 +104,10 @@ public class SelectionManager : MonoBehaviour
             {
                 crosshair.GetComponent<Image>().color = Color.green;
                 itemname.SetActive(false);
+                if(TutorialText)
+                {
+                    TutorialText.SetActive(true);
+                }
             }
         }
 

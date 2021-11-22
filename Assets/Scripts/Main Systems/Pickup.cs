@@ -28,13 +28,8 @@ public class Pickup : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickuprange))
                 {
-
-
                     //Debug.Log("Object: " + hit.transform.gameObject.name + "\nLayer: " + hit.transform.gameObject.layer);
                     //Debug.Log("Object Parent " + hit.transform.parent.name);
-
-
-
                     if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Pickups"))
                     {
                         PickupObject(hit.transform.gameObject);
@@ -104,6 +99,7 @@ public class Pickup : MonoBehaviour
             {
                 Destroy(TutorialText);
             }
+            crosshair.SetActive(false);
             if(CameraZoom.look.zoomed == true)
             {
                 close_computer();
@@ -116,6 +112,7 @@ public class Pickup : MonoBehaviour
             else
             {
                 pedia_script.close(); 
+                crosshair.SetActive(true);
             }
         }
     }
