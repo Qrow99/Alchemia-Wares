@@ -43,3 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: UI PFP
+    uniqueID: 258655113
+    locked: 0
