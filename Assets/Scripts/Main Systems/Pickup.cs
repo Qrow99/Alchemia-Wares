@@ -16,6 +16,7 @@ public class Pickup : MonoBehaviour
     public ComputerUIManager computerScreen;
     public GameObject crosshair;
     public GameObject TutorialText;
+    public PotionTextParser ptp;
 
     public void Update()
     {
@@ -83,13 +84,13 @@ public class Pickup : MonoBehaviour
             {
                 print("pausemenu");
                 // When the player presses escape to open the pause menu, lower the track
-                FindObjectOfType<AudioManager>().ChangeVolume("lo_fi_take_two", 10);
+                FindObjectOfType<AudioManager>().ChangeVolume("lo_fi_take_two_beefy_intro", 10);
                 pause_script.pause();
             }
             else
             {
                 // When the player resumes from the pause menu, bring the volume back up
-                FindObjectOfType<AudioManager>().OriginalVolume("lo_fi_take_two");
+                FindObjectOfType<AudioManager>().OriginalVolume("lo_fi_take_two_beefy_intro");
                 pause_script.Resume();
             }
         }
@@ -108,8 +109,9 @@ public class Pickup : MonoBehaviour
             else if(!PediaButtons.isPedia)
             {
                 print("Witchipedia");
+                ptp.DrawText();
                 pedia_script.open();
-                crosshair.SetActive(false);
+                crosshair.SetActive(false); 
             }
             else
             {
@@ -152,6 +154,7 @@ public class Pickup : MonoBehaviour
 
     public void close_computer()
     {
+        FindObjectOfType<AudioManager>().Play("mouse_click_raw2");
         CameraZoom.leaveComputer();
         computerScreen.disableScreen();
         crosshair.SetActive(true);

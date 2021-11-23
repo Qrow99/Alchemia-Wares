@@ -1099,6 +1099,7 @@ MonoBehaviour:
   prevButton: {fileID: 276302977}
   nextButton: {fileID: 1910387678}
   currentPage: 0
+  potionsFound: 0000000000000000000000
   rm: {fileID: 1536335911}
 --- !u!114 &192221178
 MonoBehaviour:
@@ -5828,11 +5829,11 @@ MonoBehaviour:
     spatialBlend: 0
     source: {fileID: 0}
     ogVolume: 0
-  - name: lo_fi_take_two
-    clip: {fileID: 8300000, guid: 86045a418db57844d965807985f5bb66, type: 3}
+  - name: lo_fi_take_two_beefy_intro
+    clip: {fileID: 8300000, guid: 8c10044bc757c7c42a58daf136eea894, type: 3}
     playOnAwake: 0
     loop: 0
-    volume: 25
+    volume: 20
     pitch: 0
     spatialBlend: 0
     source: {fileID: 0}
@@ -5922,7 +5923,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1ccd28217de271941a95d65f26fc1551, type: 3}
     playOnAwake: 0
     loop: 0
-    volume: 50
+    volume: 100
     pitch: 0
     spatialBlend: 0
     source: {fileID: 0}
@@ -7989,6 +7990,7 @@ MonoBehaviour:
   PFPImage: {fileID: 963464878}
   commissionerSprites:
   - {fileID: -3773514507955818361, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
+  - {fileID: 6075840028708154892, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
   - {fileID: -6329076130446754338, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
   - {fileID: 635175330124847933, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
   - {fileID: -6638737560837077189, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
@@ -7999,8 +8001,8 @@ MonoBehaviour:
   - {fileID: 392243835128385479, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
   - {fileID: -3204745864446563747, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
   - {fileID: 1371441858989507806, guid: ec74e1fab66e66f47a8145b2cb7850e1, type: 3}
-  counter: 0
   rm: {fileID: 1536335911}
+  counter: 0
 --- !u!1 &1329905430
 GameObject:
   m_ObjectHideFlags: 0
@@ -9393,7 +9395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20fc1a392244efd4982a90273ec5979f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reputationLevel: 0
+  reputationLevel: 1
   reputationprogress: 0
   spawnpoints:
   - {fileID: 1646804566}
@@ -15232,6 +15234,10 @@ PrefabInstance:
       propertyPath: speed
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 283392448378960072, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
+      propertyPath: ptp
+      value: 
+      objectReference: {fileID: 192221177}
     - target: {fileID: 283392448378960072, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
       propertyPath: Props
       value: 
@@ -69217,6 +69223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1412724623}
     m_Modifications:
+    - target: {fileID: 928514090, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
+      propertyPath: ptp
+      value: 
+      objectReference: {fileID: 192221177}
     - target: {fileID: 928514090, guid: 24d611b727f8b9d4c89d54a5921350b1, type: 3}
       propertyPath: props
       value: 

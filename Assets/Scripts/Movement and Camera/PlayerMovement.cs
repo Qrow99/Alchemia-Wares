@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         active = true;
-        FindObjectOfType<AudioManager>().Play("lo_fi_take_two");
+        FindObjectOfType<AudioManager>().Play("lo_fi_take_two_beefy_intro");
     }
 
     // Update is called once per frame

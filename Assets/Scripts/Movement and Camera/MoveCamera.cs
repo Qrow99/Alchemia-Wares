@@ -22,7 +22,7 @@ public class MoveCamera : MonoBehaviour
 
     void Update()
     {
-        if(look.zoomed)
+        if(look.zoomed && target)
         {
             // for the zoom, we look at the parent object of whatever object we want to look at
             // take the forward vector (blue one) and position the player and camera at an appropriate distance away

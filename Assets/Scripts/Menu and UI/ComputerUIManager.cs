@@ -24,13 +24,9 @@ public class ComputerUIManager : MonoBehaviour
     public void enableScreen()
     {
         computerScreen.SetActive(true);
+        FindObjectOfType<AudioManager>().Play("mouse_click_raw2");
         Cursor.lockState = CursorLockMode.Confined;
-        commissions.UpdateReputation();
-        
-        if(current_commision == 1) //activate the UI elements relating to the first commission
-        {
-
-        }
+        commissions.DrawText();
     }
 
     public void disableScreen()

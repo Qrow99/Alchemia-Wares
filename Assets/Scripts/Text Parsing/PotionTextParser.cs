@@ -18,6 +18,7 @@ public class PotionTextParser : MonoBehaviour
     public Button nextButton;
     public List<string[]> dataSheet = new List<string[]>();
     public int currentPage = 0; //Essentially just page number
+    public bool[] potionsFound;
     public ReputationManager rm; 
     public void Start()
     {
@@ -71,12 +72,24 @@ public class PotionTextParser : MonoBehaviour
             }
         }
     }
-    private void DrawText()
+
+    public void updatePotionFound(int index) {
+        potionsFound[index] = true;
+    }
+    public void DrawText()
     {
-        potionName.text = dataSheet[currentPage][0];
-        shortDesc.text = dataSheet[currentPage][1];
-        longDesc.text = dataSheet[currentPage][2];
-        potionEquation.text = dataSheet[currentPage][3];
+        if(potionsFound[currentPage] == false) {
+            potionName.text = "???";
+            shortDesc.text = "???";
+            longDesc.text = "???";
+            potionEquation.text = "???";
+        } else {
+            potionName.text = dataSheet[currentPage][0];
+            shortDesc.text = dataSheet[currentPage][1];
+            longDesc.text = dataSheet[currentPage][2];
+            potionEquation.text = dataSheet[currentPage][3];
+        }
+        
     }
     private void ShowHideButtons()
     {

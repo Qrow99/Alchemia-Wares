@@ -10,6 +10,7 @@ public class MixingSpoon : MonoBehaviour
     public GameObject[] finished_potions;
     private GameObject new_ingredient;
     public GameObject props;
+    public PotionTextParser ptp;
 
 
     // Start is called before the first frame update
@@ -17,7 +18,6 @@ public class MixingSpoon : MonoBehaviour
     // Update is called once per frame
     void OnMouseDown()
     {
-       FindObjectOfType<AudioManager>().Play("pops");
         if (ingredients.inputs.Count == 2)
         {
             if (ingredients.inputs.Contains("Nightshade"))
@@ -27,22 +27,26 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Potion of common healing");
                     new_ingredient = Instantiate(finished_potions[0], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[0].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(0);
                 }
                 //Nightshade + Cyclops Eye = 20 / 20 Potion
                 else if (ingredients.inputs.Contains("Cyclops Eye"))
                 {
                     print("20/20 potion");
                     new_ingredient = Instantiate(finished_potions[1], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[1].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(1);
                 }
 
                 //Nightshade + Powdered Achia Seed = Witch Hazel
@@ -50,38 +54,45 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Witch Hazel");
                     new_ingredient = Instantiate(finished_potions[2], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[2].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(0);
                 }
                 //Nightshade + Vampire tears = Good vibes potion
                 else if (ingredients.inputs.Contains("Vampire Tears"))
                 {
                     print("Good Vibes Potion");
                     new_ingredient = Instantiate(finished_potions[3], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[3].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(3);
                 }
                 //Nightshade + Griffin claws = Griffin Balm Potion
                 else if (ingredients.inputs.Contains("Griffin claws"))
                 {
                     print("Griffin Balm Potion");
                     new_ingredient = Instantiate(finished_potions[4], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[4].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(4);
                 }
                 else
                 {
                     print("Trash Potion");
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
@@ -93,6 +104,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 print("caffine concoction");
                 new_ingredient = Instantiate(finished_potions[12], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[12].name;
                 new_ingredient.transform.parent = props.transform;
                 new_ingredient.transform.Rotate(-90f, 0, 0);
@@ -103,6 +115,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 print("Trash Potion");
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
                 new_ingredient.transform.Rotate(-90f, 0, 0);
@@ -120,11 +133,13 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Melancholy Tonic");
                     new_ingredient = Instantiate(finished_potions[5], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[5].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(5);
                 }
                 //Cyclops Eye + Vampire tears + Lightning in a Bottle = Good Trip
                 else if (ingredients.inputs.Contains("Cyclops Eye") &&
@@ -132,16 +147,19 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Good Trip");
                     new_ingredient = Instantiate(finished_potions[6], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[6].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(6);
                 }
                 else
                 {
                     print("Trash Potion");
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
@@ -153,6 +171,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 print("Trash Potion");
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
                 new_ingredient.transform.Rotate(-90f, 0, 0);
@@ -171,11 +190,13 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Laganja Extravaganza");
                     new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[7].name;
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(7);
                 }
                 //Solace Sage + Griffin claws + Jormungandr Scales + Lightning in a Bottle = Sike Potion
                 else if (ingredients.inputs.Contains("Griffin claws") &&
@@ -184,12 +205,14 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Sike Potion");
                     new_ingredient = Instantiate(finished_potions[8], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[8].name;
 
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(8);
                 }
                 //Griffin claws + Lightning in a Bottle + Nightshade + Solace Sage = Arnold Extract
                 else if (ingredients.inputs.Contains("Griffin claws") &&
@@ -198,17 +221,20 @@ public class MixingSpoon : MonoBehaviour
                 {
                     print("Arnold Extract");
                     new_ingredient = Instantiate(finished_potions[9], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[9].name;
 
                     new_ingredient.transform.parent = props.transform;
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
+                    ptp.updatePotionFound(9);
                 }
                 else
                 {
                     print("Trash Potion");
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
 
                     new_ingredient.transform.parent = props.transform;
@@ -221,6 +247,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 print("Trash Potion");
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
 
                 new_ingredient.transform.parent = props.transform;
@@ -243,17 +270,20 @@ public class MixingSpoon : MonoBehaviour
             {
                 print("Panacea");
                 new_ingredient = Instantiate(finished_potions[10], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[10].name;
                 new_ingredient.transform.Rotate(-90f, 0, 0);
 
                 new_ingredient.transform.parent = props.transform;
                 respawningredients();
                 ingredients.inputs.Clear();
+                ptp.updatePotionFound(10);
             }
             else
             {
                 print("Trash Potion");
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+                FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
                 new_ingredient.transform.parent = props.transform;
                 new_ingredient.transform.Rotate(-90f, 0, 0);
