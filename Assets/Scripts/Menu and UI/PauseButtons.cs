@@ -6,6 +6,7 @@ public class PauseButtons : MonoBehaviour
 {
     public static bool isPaused = false;
     public GameObject PauseUI;
+    public GameObject Crosshair;
 
     public void Start()
     {
@@ -13,6 +14,7 @@ public class PauseButtons : MonoBehaviour
     }
     public void pause()
     {
+        Crosshair.SetActive(false);
         PauseUI.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
@@ -21,6 +23,7 @@ public class PauseButtons : MonoBehaviour
     public void Resume()
     {
         PauseUI.SetActive(false);
+        Crosshair.SetActive(true);
         Time.timeScale = 1;
         isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;

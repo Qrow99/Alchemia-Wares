@@ -20,7 +20,7 @@ public class Pickup : MonoBehaviour
     public void Update()
     {
         //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.green);
-        if (Input.GetKeyDown(KeyCode.Mouse0) && CameraZoom.look.zoomed == false)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && CameraZoom.look.zoomed == false && !PediaButtons.isPedia)
         {
             //print("click");
             if (heldObject == null)
@@ -46,14 +46,8 @@ public class Pickup : MonoBehaviour
                         //Vector3 zoomPosition = hit.transform.parent.forward * 1f;
                         //CameraZoom.playerEndpoint = hit.transform.position + zoomPosition;    
                         //CameraZoom.cameraEndpoint = CameraZoom.playerEndpoint + zoomPosition * 1.1f;
+                        openComputer();
                         CameraZoom.target = hit.transform;
-                        CameraZoom.computerzoom();
-                        computerScreen.enableScreen();
-                        crosshair.SetActive(false);
-                        if (TutorialText)
-                        {
-                            Destroy(TutorialText);
-                        }
                     }
                 }
             }
@@ -77,6 +71,12 @@ public class Pickup : MonoBehaviour
             if (CameraZoom.look.zoomed == true)
             {
                 close_computer();
+                crosshair.SetActive(true);
+            }
+            if(PediaButtons.isPedia)
+            {
+                pedia_script.close();
+                crosshair.SetActive(true);
             }
             // if the game is not paused, then pause
             else if (!PauseButtons.isPaused)
@@ -99,15 +99,17 @@ public class Pickup : MonoBehaviour
             {
                 Destroy(TutorialText);
             }
-            crosshair.SetActive(false);
+            
             if(CameraZoom.look.zoomed == true)
             {
                 close_computer();
             }
+
             else if(!PediaButtons.isPedia)
             {
                 print("Witchipedia");
                 pedia_script.open();
+                crosshair.SetActive(false);
             }
             else
             {
@@ -153,6 +155,18 @@ public class Pickup : MonoBehaviour
         CameraZoom.leaveComputer();
         computerScreen.disableScreen();
         crosshair.SetActive(true);
+    }
+
+    public void openComputer()
+    {
+        
+        CameraZoom.computerzoom();
+        computerScreen.enableScreen();
+        crosshair.SetActive(false);
+        if (TutorialText)
+        {
+            Destroy(TutorialText);
+        }
     }
 
 }
