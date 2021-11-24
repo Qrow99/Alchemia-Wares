@@ -30,12 +30,14 @@ public class CommissionTextParser : MonoBehaviour
         }
         //Draw the initial text
         counter = 0;
+        Debug.Log("Counter at init: " + counter);
         DrawText();
     }
 
     public void DrawText()
     {  
         counter = (2 * rm.reputationLevel) + rm.reputationprogress - 2;
+        Debug.Log("Counter after DrawText: " + counter);
         commissionerName.text = dataSheet[counter][1];
         subjectLine.text = dataSheet[counter][2];
         description.text = dataSheet[counter][3];

@@ -17048,6 +17048,10 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 283392448378960072, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
+      propertyPath: itp
+      value: 
+      objectReference: {fileID: 192221173}
+    - target: {fileID: 283392448378960072, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
       propertyPath: ptp
       value: 
       objectReference: {fileID: 192221177}
@@ -27516,6 +27520,7 @@ MonoBehaviour:
   pickup: {fileID: 1580443908}
   lockpoint: {fileID: 1955056000}
   animation_controller: {fileID: 150882923}
+  ctp: {fileID: 1328332860}
 --- !u!64 &1711871907845643324
 MeshCollider:
   m_ObjectHideFlags: 0

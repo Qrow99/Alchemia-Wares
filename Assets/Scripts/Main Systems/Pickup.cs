@@ -17,6 +17,7 @@ public class Pickup : MonoBehaviour
     public GameObject crosshair;
     public GameObject TutorialText;
     public PotionTextParser ptp;
+    public IngredientTextParser itp; 
 
     public void Update()
     {
@@ -110,6 +111,7 @@ public class Pickup : MonoBehaviour
             {
                 print("Witchipedia");
                 ptp.DrawText();
+                itp.UpdateArrows(); 
                 pedia_script.open();
                 crosshair.SetActive(false); 
             }

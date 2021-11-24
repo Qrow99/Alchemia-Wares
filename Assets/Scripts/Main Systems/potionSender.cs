@@ -8,6 +8,7 @@ public class potionSender : MonoBehaviour
     public Pickup pickup;
     public GameObject lockpoint;
     public DeliveryDoorAnimation animation_controller;
+    public CommissionTextParser ctp; 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -42,6 +43,7 @@ public class potionSender : MonoBehaviour
             if(potionName == "Potion of common healing")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if(rep.reputationLevel == 2 && rep.reputationprogress == 0)
@@ -49,6 +51,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "20_20 potion")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 2 && rep.reputationprogress == 1)
@@ -56,6 +59,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Witch Hazel")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 3 && rep.reputationprogress == 0)
@@ -63,6 +67,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Good Vibes Potion")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 3 && rep.reputationprogress == 1)
@@ -70,6 +75,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Griffin Balm Potion")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 4 && rep.reputationprogress == 0)
@@ -77,6 +83,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Melancholy Tonic")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 4 && rep.reputationprogress == 1)
@@ -84,6 +91,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Good Trip")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 5 && rep.reputationprogress == 0)
@@ -91,6 +99,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "LaGanja Extravaganza")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 5 && rep.reputationprogress == 1)
@@ -98,6 +107,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Sike Potion")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 6 && rep.reputationprogress == 0)
@@ -105,6 +115,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Arnold Extract")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
         else if (rep.reputationLevel == 6 && rep.reputationprogress == 1)
@@ -112,6 +123,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Panacea")
             {
                 rep.reputationprogress++;
+                ctp.DrawText();
             }
         }
     }

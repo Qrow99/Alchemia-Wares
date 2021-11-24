@@ -41,38 +41,50 @@ public class IngredientTextParser : MonoBehaviour
         //Draw the initial text
         DrawText(); 
     }
-    public void UpdateIngredients(int repLevel)
+    public void UpdateArrows()
     {
-        
+        prevButton.gameObject.SetActive(true);
+        nextButton.gameObject.SetActive(true);
+        if (currentPage == 0)
+        {
+            prevButton.gameObject.SetActive(false);
+        }
+        if(currentPage == rm.reputationLevel -1)
+        {
+            nextButton.gameObject.SetActive(false);
+        }
     }
 
     public void GoNext() {
         // if prevButton isn't active, always set it to active when you click nextButton
-        if (!prevButton.gameObject.activeSelf) {
-            prevButton.gameObject.SetActive(true);
-        }
-        if (currentPage < 3) {
-            currentPage += 1;
-            DrawText();
-            // if we are at the last page, set the nextButton to inactive
-            if (currentPage == 3) {
-                nextButton.gameObject.SetActive(false);
-            }
-        }
+        //if (!prevButton.gameObject.activeSelf) {
+        //    prevButton.gameObject.SetActive(true);
+        //}
+        //if (currentPage < 3) { (this is always true)
+        
+        currentPage += 1;
+        DrawText();
+        UpdateArrows(); 
+        // if we are at the last page, set the nextButton to inactive
+        //if (currentPage == rm.reputationLevel -1) {
+        //    nextButton.gameObject.SetActive(false);
+        //}
+        //}
     }
     public void GoPrev() {
         // if nextButton isn't active, always set it to active when you click prevButton
-        if (!nextButton.gameObject.activeSelf) {
-            nextButton.gameObject.SetActive(true);
-        }
-        if (currentPage > 0) {
-            currentPage -= 1;
-            DrawText();
+        //if (!nextButton.gameObject.activeSelf) {
+        //    nextButton.gameObject.SetActive(true);
+        //}
+        //if (currentPage > 0) { (this is also always true)
+        currentPage -= 1;
+        DrawText();
+        UpdateArrows(); 
             // if we are at the first page, set the prevButton to inactive
-            if (currentPage == 0) {
-                prevButton.gameObject.SetActive(false);
-            }
-        }
+            //if (currentPage == 0) {
+            //    prevButton.gameObject.SetActive(false);
+            //}
+        //}
     }
 
     private void DrawText()
