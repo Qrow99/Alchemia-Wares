@@ -21,10 +21,9 @@ public class IngredientTextParser : MonoBehaviour
     public Button prevButton;
     public Button nextButton; 
     public List<string[]> dataSheet = new List<string[]>(); //Imported text goes here
-    public List<string[]> currentlyAvailable = new List<string[]>(); //What's currently available, based on reputation.
     public int currentPage = 0; //Essentially just page number
     public ReputationManager rm; 
-    public void Start()
+    public void Awake()
     {
         //Initialize the buttons
         nextButton.onClick.AddListener(GoNext);
@@ -38,16 +37,13 @@ public class IngredientTextParser : MonoBehaviour
             string[] content = line.Split('\t');
             dataSheet.Add(content); 
         }
-        currentlyAvailable.Add(dataSheet[0]);
-        currentlyAvailable.Add(dataSheet[1]);
-        //The first two ingredients will be added to the currently available list on start.
 
         //Draw the initial text
         DrawText(); 
     }
-    private void Update()
+    public void UpdateIngredients(int repLevel)
     {
-        //If ReputationManager's reputationLevel attribute changed, drawText again?
+        
     }
 
     public void GoNext() {

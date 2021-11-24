@@ -18,7 +18,7 @@ public class CommissionTextParser : MonoBehaviour
     public ReputationManager rm;
     public int counter;
 
-    public void Start()
+    public void Awake()
     {
         //Get the file, slice it into a list of strings
         string readFromFilePath = Application.dataPath + "/Imported Text Assets/" + "Commission Requests" + ".txt";
@@ -34,14 +34,14 @@ public class CommissionTextParser : MonoBehaviour
     }
 
     public void DrawText()
-    {
+    {  
         counter = (2 * rm.reputationLevel) + rm.reputationprogress - 2;
         commissionerName.text = dataSheet[counter][1];
         subjectLine.text = dataSheet[counter][2];
         description.text = dataSheet[counter][3];
         numOfIngredientsText.text = getNumOfIngredients().ToString();
         PFPImage.sprite = commissionerSprites[counter];
-    }
+    } 
 
     private int getNumOfIngredients()
     {

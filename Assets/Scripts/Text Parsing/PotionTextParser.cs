@@ -20,7 +20,7 @@ public class PotionTextParser : MonoBehaviour
     public int currentPage = 0; //Essentially just page number
     public bool[] potionsFound;
     public ReputationManager rm; 
-    public void Start()
+    public void Awake()
     {
         //Initialize the buttons
         //Button next = nextButton.GetComponent<Button>();
