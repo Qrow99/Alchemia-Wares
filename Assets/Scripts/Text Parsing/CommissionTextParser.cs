@@ -21,7 +21,7 @@ public class CommissionTextParser : MonoBehaviour
     public void Awake()
     {
         //Get the file, slice it into a list of strings
-        string readFromFilePath = Application.dataPath + "/Imported Text Assets/" + "Commission Requests" + ".txt";
+        string readFromFilePath = Path.Combine(Application.streamingAssetsPath, "Commission Requests.txt");
         List<string> fileLines = File.ReadAllLines(readFromFilePath).ToList();
         foreach (string line in fileLines)
         {
@@ -36,7 +36,9 @@ public class CommissionTextParser : MonoBehaviour
 
     public void DrawText()
     {  
-        counter = (2 * rm.reputationLevel) + rm.reputationprogress - 2;
+        counter = 2 * rm.reputationLevel + rm.reputationprogress - 2;
+        Debug.Log("Reputation Level:" + rm.reputationLevel);
+        Debug.Log("Reputation Progress:" + rm.reputationprogress); 
         Debug.Log("Counter after DrawText: " + counter);
         commissionerName.text = dataSheet[counter][1];
         subjectLine.text = dataSheet[counter][2];

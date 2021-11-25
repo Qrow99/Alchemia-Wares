@@ -21,7 +21,7 @@ public class ReputationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (reputationLevel == 1 && reputationprogress >= 1) //level up for the first successfull potion
+        if (reputationLevel == 1 && reputationprogress == 1) //level up for the first successfull potion
         {
             //at level 2, give cyclops eye and powdered Achia Seed
             new_ingredient = Instantiate(respawn_ingredients[0], spawnpoints[0].position, Quaternion.identity);

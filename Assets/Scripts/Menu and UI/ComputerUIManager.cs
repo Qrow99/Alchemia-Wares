@@ -26,7 +26,7 @@ public class ComputerUIManager : MonoBehaviour
         computerScreen.SetActive(true);
         FindObjectOfType<AudioManager>().Play("mouse_click_raw2");
         Cursor.lockState = CursorLockMode.Confined;
-        //commissions.DrawText();
+        commissions.DrawText();
     }
 
     public void disableScreen()

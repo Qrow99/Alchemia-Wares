@@ -30,7 +30,7 @@ public class IngredientTextParser : MonoBehaviour
         prevButton.onClick.AddListener(GoPrev);
         prevButton.gameObject.SetActive(false);
         //Get the file, slice it into a list of strings
-        string readFromFilePath = Application.dataPath + "/Imported Text Assets/" + "Ingredient Descriptions" + ".txt";
+        string readFromFilePath = Path.Combine(Application.streamingAssetsPath, "Ingredient Descriptions.txt");
         List<string> fileLines = File.ReadAllLines(readFromFilePath).ToList();
         foreach(string line in fileLines)
         {
