@@ -7,6 +7,7 @@ public class ComputerUIManager : MonoBehaviour
     public GameObject computerScreen;
     public int current_commision;
     public CommissionTextParser commissions;
+    public ReputationUI ru; 
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class ComputerUIManager : MonoBehaviour
         computerScreen.SetActive(true);
         FindObjectOfType<AudioManager>().Play("mouse_click_raw2");
         Cursor.lockState = CursorLockMode.Confined;
+        ru.UpdateReputation(); 
         commissions.DrawText();
     }
 

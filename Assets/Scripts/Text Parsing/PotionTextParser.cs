@@ -23,8 +23,6 @@ public class PotionTextParser : MonoBehaviour
     public void Awake()
     {
         //Initialize the buttons
-        //Button next = nextButton.GetComponent<Button>();
-        //Button prev = prevButton.GetComponent<Button>();
         nextButton.onClick.AddListener(GoNext);
         prevButton.onClick.AddListener(GoPrev);
         prevButton.gameObject.SetActive(false);
@@ -78,6 +76,7 @@ public class PotionTextParser : MonoBehaviour
     }
     public void DrawText()
     {
+        Debug.Log(currentPage);
         if(potionsFound[currentPage] == false) {
             potionName.text = "???";
             shortDesc.text = "???";
