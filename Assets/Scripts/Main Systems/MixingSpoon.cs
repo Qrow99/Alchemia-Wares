@@ -125,10 +125,10 @@ public class MixingSpoon : MonoBehaviour
         }
         else if (ingredients.inputs.Count == 3)
         {
-            if (ingredients.inputs.Contains("Vampire Tears"))
+            if (ingredients.inputs.Contains("Solace Sage"))
             {
                 //Solace Sage + Vampire tears + Jormungandr Scales = Melancholy Tonic
-                if (ingredients.inputs.Contains("Solace Sage") &&
+                if (ingredients.inputs.Contains("Vampire Tears") &&
                     ingredients.inputs.Contains("Jormungandr Scales"))
                 {
                     print("Melancholy Tonic");
@@ -141,11 +141,11 @@ public class MixingSpoon : MonoBehaviour
                     ingredients.inputs.Clear();
                     ptp.updatePotionFound(5);
                 }
-                //Cyclops Eye + Vampire tears + Lightning in a Bottle = Good Trip
-                else if (ingredients.inputs.Contains("Cyclops Eye") &&
-                         ingredients.inputs.Contains("Lightning in a bottle"))
+                //Jormungandr Scales + Solace Sage + Nightshade = Lumibarbital
+                else if (ingredients.inputs.Contains("Nightshade") &&
+                         ingredients.inputs.Contains("Jormungandr Scales"))
                 {
-                    print("Good Trip");
+                    print("Lumibarbital");
                     new_ingredient = Instantiate(finished_potions[6], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[6].name;
@@ -154,6 +154,20 @@ public class MixingSpoon : MonoBehaviour
                     respawningredients();
                     ingredients.inputs.Clear();
                     ptp.updatePotionFound(6);
+                }
+                //Solace Sage + Vampire Tears + Lightning in a bottle = Laganja Extravaganza 
+                else if (ingredients.inputs.Contains("Vampire Tears") &&
+                         ingredients.inputs.Contains("Lightning in a bottle"))
+                {
+                    print("Laganja Extravaganza");
+                    new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
+                    FindObjectOfType<AudioManager>().Play("pops");
+                    new_ingredient.name = finished_potions[7].name;
+                    new_ingredient.transform.parent = props.transform;
+                    new_ingredient.transform.Rotate(-90f, 0, 0);
+                    respawningredients();
+                    ingredients.inputs.Clear();
+                    ptp.updatePotionFound(7);
                 }
                 else
                 {
@@ -181,27 +195,12 @@ public class MixingSpoon : MonoBehaviour
         }
         else if (ingredients.inputs.Count == 4)
         {
-            //Solace Sage +Cyclops Eye + Vampire tears + Jormungandr Scales = Laganja Extravaganza
+           
             if (ingredients.inputs.Contains("Solace Sage"))
             {
-                if (ingredients.inputs.Contains("Cyclops Eye") &&
-                    ingredients.inputs.Contains("Vampire Tears") &&
-                    ingredients.inputs.Contains("Jormungandr Scales"))
-                {
-                    print("Laganja Extravaganza");
-                    new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
-                    FindObjectOfType<AudioManager>().Play("pops");
-                    new_ingredient.name = finished_potions[7].name;
-                    new_ingredient.transform.parent = props.transform;
-                    new_ingredient.transform.Rotate(-90f, 0, 0);
-                    respawningredients();
-                    ingredients.inputs.Clear();
-                    ptp.updatePotionFound(7);
-                }
-                //Solace Sage + Griffin claws + Jormungandr Scales + Lightning in a Bottle = Sike Potion
-                else if (ingredients.inputs.Contains("Griffin claws") &&
+                if (ingredients.inputs.Contains("Vampire Tears") &&
                         ingredients.inputs.Contains("Jormungandr Scales") &&
-                        ingredients.inputs.Contains("Lightning in a bottle"))
+                        ingredients.inputs.Contains("Cyclops Eye"))
                 {
                     print("Sike Potion");
                     new_ingredient = Instantiate(finished_potions[8], spawnpoints[7].position, Quaternion.identity);

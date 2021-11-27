@@ -12,12 +12,10 @@ public class IngredientTextParser : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientName1;
     [SerializeField] TextMeshProUGUI shortDesc1;
     [SerializeField] TextMeshProUGUI longDesc1;
-    [SerializeField] TextMeshProUGUI processingMethod1;
 
     [SerializeField] TextMeshProUGUI ingredientName2;
     [SerializeField] TextMeshProUGUI shortDesc2;
     [SerializeField] TextMeshProUGUI longDesc2;
-    [SerializeField] TextMeshProUGUI processingMethod2;
     public Button prevButton;
     public Button nextButton; 
     public List<string[]> dataSheet = new List<string[]>(); //Imported text goes here
@@ -92,12 +90,10 @@ public class IngredientTextParser : MonoBehaviour
             ingredientName1.text = dataSheet[currentPage*2][0];
             shortDesc1.text = dataSheet[currentPage*2][1];
             longDesc1.text = dataSheet[currentPage*2][2];
-            processingMethod1.text = dataSheet[currentPage*2][3];
 
             ingredientName2.text = dataSheet[currentPage*2 + 1][0];
             shortDesc2.text = dataSheet[currentPage*2 + 1][1];
             longDesc2.text = dataSheet[currentPage*2 + 1][2];
-            processingMethod2.text = dataSheet[currentPage*2 + 1][3];
     }
     
 }

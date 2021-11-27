@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 7378136408674403562}
   - component: {fileID: 7378136408674403563}
   m_Layer: 8
-  m_Name: Good Trip
+  m_Name: Lumibarbital
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

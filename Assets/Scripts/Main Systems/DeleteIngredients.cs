@@ -68,11 +68,11 @@ public class DeleteIngredients : MonoBehaviour
             {
                 //respawn doughnut and coffee
             }
-            else if(deleted == "Good Trip")
+            else if(deleted == "Lumibarbital")
             {
-                RespawnEye();
-                RespawnLIB();
-                RespawnEye();
+                RespawnScale();
+                RespawnNightshade();
+                RespawnSolace();
             }
             else if(deleted == "Good Vibes Potion")
             {
@@ -87,9 +87,8 @@ public class DeleteIngredients : MonoBehaviour
             else if(deleted == "Laganja Extravaganza")
             {
                 RespawnSolace();
-                RespawnEye();
                 RespawnVamp();
-                RespawnScale();
+                RespawnLIB();
             }
             else if(deleted == "Melancholy Tonic")
             {
@@ -105,6 +104,8 @@ public class DeleteIngredients : MonoBehaviour
                 RespawnVamp();
                 RespawnClaws();
                 RespawnScale();
+                RespawnLIB();
+                RespawnNightshade();
             }
             else if(deleted == "Potion of common healing")
             {
@@ -114,9 +115,9 @@ public class DeleteIngredients : MonoBehaviour
             else if(deleted == "Sike Potion")
             {
                 RespawnSolace();
-                RespawnClaws();
+                RespawnVamp();
                 RespawnScale();
-                RespawnLIB();
+                RespawnEye();
             }
             else if(deleted == "Witch Hazel")
             {

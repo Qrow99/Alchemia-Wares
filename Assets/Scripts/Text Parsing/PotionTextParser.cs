@@ -90,9 +90,5 @@ public class PotionTextParser : MonoBehaviour
         }
         
     }
-    private void ShowHideButtons()
-    {
-
-    }
 
 }

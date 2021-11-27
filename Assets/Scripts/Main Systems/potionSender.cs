@@ -82,7 +82,7 @@ public class potionSender : MonoBehaviour
         }
         else if (rep.reputationLevel == 4 && rep.reputationprogress == 1)
         {
-            if (potionName == "Good Trip")
+            if (potionName == "Lumibarbital")
             {
                 rep.reputationprogress++;
             }

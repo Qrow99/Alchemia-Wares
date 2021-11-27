@@ -40,9 +40,9 @@ public class CommissionTextParser : MonoBehaviour
         Debug.Log("Reputation Level:" + rm.reputationLevel);
         Debug.Log("Reputation Progress:" + rm.reputationprogress); 
         Debug.Log("Counter after DrawText: " + counter);
-        commissionerName.text = dataSheet[counter][1];
-        subjectLine.text = dataSheet[counter][2];
-        description.text = dataSheet[counter][3];
+        commissionerName.text = dataSheet[counter][0];
+        subjectLine.text = dataSheet[counter][1];
+        description.text = dataSheet[counter][2];
         numOfIngredientsText.text = getNumOfIngredients().ToString();
         PFPImage.sprite = commissionerSprites[counter];
     } 
