@@ -75,13 +75,13 @@ public class Pickup : MonoBehaviour
                 close_computer();
                 crosshair.SetActive(true);
             }
-            if(PediaButtons.isPedia)
+            else if(PediaButtons.isPedia)
             {
                 pedia_script.close();
                 crosshair.SetActive(true);
             }
             // if the game is not paused, then pause
-            else if (!PauseButtons.isPaused)
+            else if (!PauseButtons.isPaused && !CameraZoom.look.zoomed)
             {
                 print("pausemenu");
                 // When the player presses escape to open the pause menu, lower the track
@@ -106,7 +106,6 @@ public class Pickup : MonoBehaviour
             {
                 close_computer();
             }
-
             else if(!PediaButtons.isPedia)
             {
                 print("Witchipedia");
