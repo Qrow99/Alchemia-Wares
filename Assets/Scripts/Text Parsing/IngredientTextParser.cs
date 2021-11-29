@@ -47,7 +47,7 @@ public class IngredientTextParser : MonoBehaviour
         {
             prevButton.gameObject.SetActive(false);
         }
-        if(currentPage == rm.reputationLevel -1)
+        if(currentPage == 3)
         {
             nextButton.gameObject.SetActive(false);
         }

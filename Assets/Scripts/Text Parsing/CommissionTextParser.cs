@@ -53,11 +53,11 @@ public class CommissionTextParser : MonoBehaviour
         {
             return 2; //First 5 potions
         }
-        else if(counter == 5 || counter == 6)
+        else if(counter == 5 && counter < 8)
         {
-            return 3; //Melancholy, Good Trip
+            return 3; //Melancholy, Lumibarbital, Laganja
         }
-        else if(counter >= 7 && counter < 10)
+        else if(counter == 8 && counter == 9)
         {
             return 4; //Laganja, Sike, Arnold
         }

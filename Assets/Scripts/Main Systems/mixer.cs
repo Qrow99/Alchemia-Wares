@@ -12,7 +12,7 @@ public class mixer : MonoBehaviour
         {
             print(other.name);
             FindObjectOfType<AudioManager>().Play("splash");
-            if(inputs.Count < 6)
+            if(inputs.Count < 9)
             {
                 inputs.Add(other.gameObject.name);
             }

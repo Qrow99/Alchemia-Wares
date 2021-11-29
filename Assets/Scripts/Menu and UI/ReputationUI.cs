@@ -74,10 +74,14 @@ public class ReputationUI : MonoBehaviour
             IngredientLevel2.gameObject.SetActive(false);
             IngredientLevel3.gameObject.SetActive(true);
         }
-        else
+        else if (rm.reputationLevel == 4)
         {
             IngredientLevel3.gameObject.SetActive(false);
             IngredientLevel4.gameObject.SetActive(true); 
+        }
+        else
+        {
+            return; 
         }
     }
 

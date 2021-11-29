@@ -89,7 +89,7 @@ public class potionSender : MonoBehaviour
         }
         else if (rep.reputationLevel == 5 && rep.reputationprogress == 0)
         {
-            if (potionName == "LaGanja Extravaganza")
+            if (potionName == "Laganja Extravaganza")
             {
                 rep.reputationprogress++;
             }

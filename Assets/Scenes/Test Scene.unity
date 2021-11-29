@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 14812128}
   m_Layer: 0
-  m_Name: Scrips
+  m_Name: Scripts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14931,7 +14931,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2018006446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17606,7 +17606,7 @@ PrefabInstance:
       objectReference: {fileID: 794676317}
     - target: {fileID: 1973651079, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
       propertyPath: speed
-      value: 0.5
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 283392448378960072, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
       propertyPath: itp
@@ -17644,6 +17644,10 @@ PrefabInstance:
       propertyPath: computerScreen
       value: 
       objectReference: {fileID: 1064890038}
+    - target: {fileID: 283392448378960073, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
+      propertyPath: mouseSensitivity
+      value: 275
+      objectReference: {fileID: 0}
     - target: {fileID: 283392448378960075, guid: 58e2e34a8b6312d4c97097865f3071d2, type: 3}
       propertyPath: m_AllowXRRendering
       value: 0
