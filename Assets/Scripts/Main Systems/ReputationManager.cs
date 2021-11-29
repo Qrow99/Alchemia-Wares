@@ -49,6 +49,7 @@ public class ReputationManager : MonoBehaviour
 
                 new_ingredient = Instantiate(respawn_ingredients[3], spawnpoints[3].position, Quaternion.identity);
                 new_ingredient.name = respawn_ingredients[3].name;
+                new_ingredient.transform.Rotate(0, -90f, 0);
                 new_ingredient.transform.parent = props.transform;
             }
             //at level 4, give lightning in a bottle and jormungandr scales

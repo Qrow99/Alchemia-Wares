@@ -328,6 +328,7 @@ public class MixingSpoon : MonoBehaviour
             {
                 new_ingredient = Instantiate(respawn_ingredients[1], spawnpoints[1].position, Quaternion.identity);
                 new_ingredient.name = respawn_ingredients[1].name;
+                new_ingredient.transform.Rotate(0, -90f, 0);
             }
             else if (ingredients.inputs[i] == "Nightshade")
             {

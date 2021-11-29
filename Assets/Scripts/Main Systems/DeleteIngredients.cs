@@ -52,6 +52,7 @@ public class DeleteIngredients : MonoBehaviour
         }
         else if (other.tag == "Potion")
         {
+            /*
             if(deleted == "20_20 potion")
             {
                 RespawnNightshade();
@@ -127,7 +128,7 @@ public class DeleteIngredients : MonoBehaviour
             else if(deleted == "Trash Potion")
             {
                 print("Trash");
-            }
+            }*/
             Destroy(other.gameObject);
         }
     }
@@ -166,6 +167,7 @@ public class DeleteIngredients : MonoBehaviour
         new_ingredient = Instantiate(ingredients[1], spawnpoints[1].position, Quaternion.identity);
         new_ingredient.name = ingredients[1].name;
         new_ingredient.transform.parent = props.transform;
+        new_ingredient.transform.Rotate(0, -90f, 0);
     }
 
     private void RespawnNightshade()
