@@ -60,7 +60,7 @@ public class MixingSpoon : MonoBehaviour
                     new_ingredient.transform.Rotate(-90f, 0, 0);
                     respawningredients();
                     ingredients.inputs.Clear();
-                    ptp.updatePotionFound(0);
+                    ptp.updatePotionFound(2);
                 }
                 //Nightshade + Vampire tears = Good vibes potion
                 else if (ingredients.inputs.Contains("Vampire Tears"))

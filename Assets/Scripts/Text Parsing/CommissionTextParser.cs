@@ -49,15 +49,15 @@ public class CommissionTextParser : MonoBehaviour
 
     private int getNumOfIngredients()
     {
-        if(counter >= 0 && counter < 5)
+        if(counter >= 0 && counter < 6)
         {
             return 2; //First 5 potions
         }
-        else if(counter == 5 && counter < 8)
+        else if(counter >= 6 && counter < 9)
         {
             return 3; //Melancholy, Lumibarbital, Laganja
         }
-        else if(counter == 8 && counter == 9)
+        else if(counter == 9 || counter == 10)
         {
             return 4; //Laganja, Sike, Arnold
         }
