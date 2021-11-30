@@ -16,6 +16,8 @@ public class IngredientTextParser : MonoBehaviour
     [SerializeField] TextMeshProUGUI ingredientName2;
     [SerializeField] TextMeshProUGUI shortDesc2;
     [SerializeField] TextMeshProUGUI longDesc2;
+
+    [SerializeField] TextMeshProUGUI pageNum; 
     public Button prevButton;
     public Button nextButton; 
     public List<string[]> dataSheet = new List<string[]>(); //Imported text goes here
@@ -99,6 +101,8 @@ public class IngredientTextParser : MonoBehaviour
             ingredientName2.text = dataSheet[currentPage*2 + 1][0];
             shortDesc2.text = dataSheet[currentPage*2 + 1][1];
             longDesc2.text = dataSheet[currentPage*2 + 1][2];
+
+            pageNum.text = (currentPage + 1).ToString(); 
     }
     
 }
