@@ -30,19 +30,27 @@ public class potionSender : MonoBehaviour
     IEnumerator wait(GameObject other)
     {
         print("start counter");
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         FindObjectOfType<AudioManager>().Play("pneumatic_tube_idea");
         print("destroy potion");
         Destroy(other);
     }
+    
+
+   IEnumerator correctPotion() { 
+        yield return new WaitForSeconds(1f);
+        FindObjectOfType<AudioManager>().Play("correct_potion");
+    }
 
     private void checkifcorrect(string potionName)
     {
+        print("check if correct");
         if(rep.reputationLevel == 1 && rep.reputationprogress == 0)//on the first commission
         {
             if(potionName == "Potion of common healing")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if(rep.reputationLevel == 2 && rep.reputationprogress == 0)
@@ -50,6 +58,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "20_20 potion")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 2 && rep.reputationprogress == 1)
@@ -57,6 +66,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Witch Hazel")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 3 && rep.reputationprogress == 0)
@@ -64,6 +74,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Good Vibes Potion")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 3 && rep.reputationprogress == 1)
@@ -71,6 +82,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Griffin Balm Potion")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 4 && rep.reputationprogress == 0)
@@ -78,6 +90,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Melancholy Tonic")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 4 && rep.reputationprogress == 1)
@@ -85,6 +98,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Lumibarbital")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 5 && rep.reputationprogress == 0)
@@ -92,6 +106,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Laganja Extravaganza")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 5 && rep.reputationprogress == 1)
@@ -99,6 +114,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Sike Potion")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 6 && rep.reputationprogress == 0)
@@ -106,6 +122,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Arnold Extract")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
         else if (rep.reputationLevel == 6 && rep.reputationprogress == 1)
@@ -113,6 +130,7 @@ public class potionSender : MonoBehaviour
             if (potionName == "Panacea")
             {
                 rep.reputationprogress++;
+                StartCoroutine(correctPotion());
             }
         }
     }

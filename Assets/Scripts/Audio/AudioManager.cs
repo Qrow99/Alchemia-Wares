@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
-        print(name + " volume returned to" + (s.ogVolume * 100) + " from " + s.volume);
+        print(name + " volume returned to " + (s.ogVolume * 100) + " from " + s.volume);
         s.source.volume = s.ogVolume;
     }
 
