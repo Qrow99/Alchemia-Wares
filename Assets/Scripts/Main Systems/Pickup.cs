@@ -85,13 +85,13 @@ public class Pickup : MonoBehaviour
             {
                 print("pausemenu");
                 // When the player presses escape to open the pause menu, lower the track
-                FindObjectOfType<AudioManager>().ChangeVolume("lo_fi_take_two_beefy_intro", 10);
+                FindObjectOfType<AudioManager>().ChangeVolume("bgm", 10);
                 pause_script.pause();
             }
             else
             {
                 // When the player resumes from the pause menu, bring the volume back up
-                FindObjectOfType<AudioManager>().OriginalVolume("lo_fi_take_two_beefy_intro");
+                FindObjectOfType<AudioManager>().OriginalVolume("bgm");
                 pause_script.Resume();
             }
         }

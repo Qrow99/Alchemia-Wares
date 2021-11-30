@@ -11,9 +11,8 @@ public class MixingSpoon : MonoBehaviour
     private GameObject new_ingredient;
     public GameObject props;
     public PotionTextParser ptp;
+    public PotionCheck potionCheck;
 
-
-    // Start is called before the first frame update
 
     // Update is called once per frame
     void OnMouseDown()
@@ -26,6 +25,10 @@ public class MixingSpoon : MonoBehaviour
                 if (ingredients.inputs.Contains("Solace Sage"))
                 {
                     print("Potion of common healing");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[0], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[0].name;
@@ -39,6 +42,10 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Cyclops Eye"))
                 {
                     print("20/20 potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[1], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[1].name;
@@ -53,6 +60,10 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Powdered Achia Seed"))
                 {
                     print("Witch Hazel");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[2], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[2].name;
@@ -66,6 +77,10 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Vampire Tears"))
                 {
                     print("Good Vibes Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[3], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[3].name;
@@ -79,6 +94,10 @@ public class MixingSpoon : MonoBehaviour
                 else if (ingredients.inputs.Contains("Griffin claws"))
                 {
                     print("Griffin Balm Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[4], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[4].name;
@@ -91,6 +110,10 @@ public class MixingSpoon : MonoBehaviour
                 else
                 {
                     print("Trash Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
@@ -103,6 +126,10 @@ public class MixingSpoon : MonoBehaviour
             else if(ingredients.inputs.Contains("Coffee") && ingredients.inputs.Contains("Doughnut"))
             {
                 print("caffine concoction");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[12], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[12].name;
@@ -114,6 +141,10 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
@@ -132,6 +163,10 @@ public class MixingSpoon : MonoBehaviour
                     ingredients.inputs.Contains("Jormungandr Scales"))
                 {
                     print("Melancholy Tonic");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[5], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[5].name;
@@ -146,6 +181,10 @@ public class MixingSpoon : MonoBehaviour
                          ingredients.inputs.Contains("Jormungandr Scales"))
                 {
                     print("Lumibarbital");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[6], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[6].name;
@@ -160,6 +199,10 @@ public class MixingSpoon : MonoBehaviour
                          ingredients.inputs.Contains("Lightning in a bottle"))
                 {
                     print("Laganja Extravaganza");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[7], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[7].name;
@@ -172,6 +215,10 @@ public class MixingSpoon : MonoBehaviour
                 else
                 {
                     print("Trash Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
@@ -184,6 +231,10 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
@@ -203,6 +254,10 @@ public class MixingSpoon : MonoBehaviour
                         ingredients.inputs.Contains("Cyclops Eye"))
                 {
                     print("Sike Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[8], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[8].name;
@@ -219,6 +274,10 @@ public class MixingSpoon : MonoBehaviour
                         ingredients.inputs.Contains("Lightning in a bottle"))
                 {
                     print("Arnold Extract");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[9], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[9].name;
@@ -232,6 +291,10 @@ public class MixingSpoon : MonoBehaviour
                 else
                 {
                     print("Trash Potion");
+                    // if cannot spawn a potion, then delete that potion
+                    if (!potionCheck.canSpawnPotion) {
+                        Destroy(potionCheck.potion);
+                    }
                     new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                     FindObjectOfType<AudioManager>().Play("pops");
                     new_ingredient.name = finished_potions[11].name;
@@ -245,6 +308,10 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
@@ -268,6 +335,10 @@ public class MixingSpoon : MonoBehaviour
                 ingredients.inputs.Contains("Lightning in a bottle"))
             {
                 print("Panacea");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[10], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[10].name;
@@ -281,6 +352,10 @@ public class MixingSpoon : MonoBehaviour
             else
             {
                 print("Trash Potion");
+                // if cannot spawn a potion, then delete that potion
+                if (!potionCheck.canSpawnPotion) {
+                    Destroy(potionCheck.potion);
+                }
                 new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
                 FindObjectOfType<AudioManager>().Play("pops");
                 new_ingredient.name = finished_potions[11].name;
@@ -293,6 +368,10 @@ public class MixingSpoon : MonoBehaviour
         else
         {
             print("Trash Potion");
+            // if cannot spawn a potion, then delete that potion
+            if (!potionCheck.canSpawnPotion) {
+                Destroy(potionCheck.potion);
+            }
             new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
             FindObjectOfType<AudioManager>().Play("pops");
             new_ingredient.name = finished_potions[11].name;
