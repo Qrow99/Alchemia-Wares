@@ -13,6 +13,7 @@ public class PotionTextParser : MonoBehaviour
     [SerializeField] TextMeshProUGUI shortDesc;
     [SerializeField] TextMeshProUGUI longDesc;
     [SerializeField] TextMeshProUGUI potionEquation;
+    [SerializeField] TextMeshProUGUI pageNum; 
 
     public Button prevButton;
     public Button nextButton;
@@ -88,6 +89,7 @@ public class PotionTextParser : MonoBehaviour
             longDesc.text = dataSheet[currentPage][2];
             potionEquation.text = dataSheet[currentPage][3];
         }
+        pageNum.text = (currentPage + 1).ToString(); 
         
     }
 

@@ -290,6 +290,17 @@ public class MixingSpoon : MonoBehaviour
                 ingredients.inputs.Clear();
             }
         }
+        else
+        {
+            print("Trash Potion");
+            new_ingredient = Instantiate(finished_potions[11], spawnpoints[7].position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("pops");
+            new_ingredient.name = finished_potions[11].name;
+            new_ingredient.transform.parent = props.transform;
+            new_ingredient.transform.Rotate(-90f, 0, 0);
+            respawningredients();
+            ingredients.inputs.Clear();
+        }
 
         if(new_ingredient != null)
         {

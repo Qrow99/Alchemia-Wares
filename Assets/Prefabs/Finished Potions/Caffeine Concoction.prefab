@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 7313520959443323015}
   - component: {fileID: 7313520959443323014}
   m_Layer: 8
-  m_Name: Caffine Concoction
+  m_Name: Caffeine Concoction
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
