@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : MonoBehaviour
 {
+    
     public void PlayGame()
     {
         SceneManager.LoadScene("Test Scene");
@@ -15,4 +16,5 @@ public class MainMenuButtons : MonoBehaviour
         print("quit");
         Application.Quit();
     }
+
 }
