@@ -50,6 +50,7 @@ public class Pickup : MonoBehaviour
                         //CameraZoom.cameraEndpoint = CameraZoom.playerEndpoint + zoomPosition * 1.1f;
                         openComputer();
                         CameraZoom.target = hit.transform;
+                        crosshair.SetActive(false);
                     }
                 }
             }
@@ -87,12 +88,14 @@ public class Pickup : MonoBehaviour
                 // When the player presses escape to open the pause menu, lower the track
                 FindObjectOfType<AudioManager>().ChangeVolume("bgm", 10);
                 pause_script.pause();
+                crosshair.SetActive(false);
             }
             else
             {
                 // When the player resumes from the pause menu, bring the volume back up
                 FindObjectOfType<AudioManager>().OriginalVolume("bgm");
                 pause_script.Resume();
+                crosshair.SetActive(true);
             }
         }
         if(Input.GetKeyDown(KeyCode.Tab)) //Witchipedia menu. Closes computer then enters Witchipedia if zoomed in
@@ -105,6 +108,7 @@ public class Pickup : MonoBehaviour
             if(CameraZoom.look.zoomed == true)
             {
                 close_computer();
+                crosshair.SetActive(true);
             }
             else if(!PediaButtons.isPedia)
             {
